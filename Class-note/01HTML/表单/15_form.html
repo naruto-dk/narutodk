@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>my demo</title>
+</head>
+<body>
+   <form action="xx.php" method="post" enctype="multipart/form-data">
+      <table border="1" width="500" align="center" cellspacing="0" cellpadding="8">
+         <tr><th colspan="2">注册界面</th></tr>
+         <tr>
+            <td width="120">用户名</td>
+            <td><input type="text" name="user" size="10" maxlength="10"/></td>
+         </tr>
+         <tr>
+            <td>密码</td>
+            <td><input type="password" name="pwd"/></td>
+         </tr>
+         <tr>
+            <td>确认密码</td>
+            <td><input type="password" name="pwd2"/></td>
+         </tr>
+         <tr>
+            <td>性别</td>
+            <td>
+              <input type="radio" name="sex" value="0"/>男
+              <input type="radio" name="sex" value="1" checked="checked"/>女
+            </td>
+         </tr>
+         <tr>
+            <td>兴趣标签</td>
+            <td>
+             <input type="checkbox" name="tag[]" value="1" checked="checked"/>社会
+             <input type="checkbox" name="tag[]" value="2" checked="checked"/>新闻
+             <input type="checkbox" name="tag[]" value="3"/>体育
+             <input type="checkbox" name="tag[]" value="4"/>政治<br/>
+             <input type="checkbox" name="tag[]" value="5"/>时尚
+             <input type="checkbox" name="tag[]" value="6"/>IT
+             <input type="checkbox" name="tag[]" value="7"/>汽车
+             <input type="checkbox" name="tag[]" value="8"/>星座
+            </td>
+         </tr>
+         <tr>
+            <td>所在地</td>
+            <td>
+              <select name="addr">
+                 <optgroup label="华北区">
+                    <option value="1">北京</option>
+                    <option value="2">天津</option>
+                    <option value="3">河北</option>
+                 </optgroup>
+                 <optgroup label="华南区">
+                    <option value="4" selected="selected">浙江</option>
+                    <option value="5">上海</option>
+                    <option value="6">广州</option>
+                 </optgroup>
+              </select>
+            </td>
+         </tr>
+         <tr>
+            <td>爱好</td>
+            <td>
+              <select name="aihao[]" multiple="multiple"
+               size="2">
+                 <option value="1" selected="selected">
+                                    看电影
+                 </option>
+                 <option value="2">游泳</option>
+                 <option value="3">篮球</option>
+                 <option value="4">爬山</option>
+                 <option value="5">看书</option>
+              </select>
+            </td>
+         </tr>
+         <tr>
+            <td>上传照片</td>
+            <td>
+              <input type="file" name="pic[]"/>
+              <input type="file" name="pic[]"/>
+            </td>
+         </tr>
+         <tr>
+            <td>自我介绍</td>
+            <td>
+              <textarea rows="10" cols="50" name="info">简介</textarea>
+            </td>
+         </tr>
+         <tr>
+            <th colspan="2">
+               <input type="submit" value="注册"/>
+               <input type="button" value="普通按钮"/>
+               <input type="reset" value="重写"/>
+               <input type="hidden" name="id" value="5"/>
+            </th>
+         </tr>
+      </table>
+   </form>
+</body>
+</html>
+
+
+
+

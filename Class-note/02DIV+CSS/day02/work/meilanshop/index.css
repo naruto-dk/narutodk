@@ -1,0 +1,521 @@
+@charset "UTF-8";
+/*css初始化*/
+			body,p,div,ul,a,input{
+				margin:0; padding:0; font-size:12px; font-family: "微软雅黑";
+			}
+			ul{list-style:none;}
+			img,input,button{
+				 border:0 none;
+				 outline-style:none;
+			}
+			a{
+				 text-decoration:none;
+			}
+
+			/*头部分开始*/
+			.header{
+				 height:26px;
+				 border-bottom:1px solid #D8D8D8;
+				 background-color:#F7F7F7;
+			}
+			.header_content{
+				 width:970px;
+				 height:26px;
+				 margin:0 auto;
+			}
+
+			.header_l{
+				 float:left;
+				 color:#444444;
+				 height:26px;
+				 line-height:26px;
+			}
+			.header_r{
+				 float:right;
+				 height:26px;
+				 line-height:26px;
+			}
+			.header_r li{
+				float:left;
+				background:url(images/sj.png) no-repeat  right  center;
+			}
+
+			.header_r li a{
+				  color:#444444;
+				  padding:0 10px;
+			}
+
+			.header_r li a:hover{
+				 color:#F8461F;
+				 text-decoration:underline;
+			}
+			/*头部分结束*/
+
+
+
+			/*页面主体开始*/
+				.box{
+					 width:970px;
+					 margin:0 auto;
+					 margin-bottom:20px;
+				}
+
+
+   				.box_content{
+   					 height:98px;
+   				}
+
+   				.box_l{
+					width:200px;
+					height:84px;
+					float:left;
+   				}
+
+   				.box_r{
+					float:right;
+					width:528px;
+					height:40px;
+					background-color:#F1F1F1;
+					border:1px solid #C9C9C9;
+					margin-top:29px;
+   				}
+
+   				.txt{
+   					 height:28px;
+   					 width:415px;
+   					 border:1px solid #A6A6A6;
+   					 border-right:0 none;
+   					 margin-top:5px;
+   					 margin-left:4px;
+   					 color:#999999;
+   					 padding-left:4px;
+   					 float:left;
+   				}
+
+   				.btn{
+   					 width:99px;
+   					 height:30px;
+   					 background-image:url(images/serch.png);
+   					 float:left;
+   					 margin-top:5px;
+   				}
+
+
+   				/*导航部分*/
+
+   				.box_nav{
+   					 height:25px;
+   					 border-bottom:2px solid #0266A3;
+   				}
+
+   				.box_nav li{
+   					 float:left;
+   				}
+
+   				.box_nav li a{
+   					 color:#306BAE;
+   					 padding:0 15px;
+   					 height:25px;
+   					 display:inline-block;
+   					 line-height:25px;
+   				}
+
+   				.box_nav li a:hover{
+   					background-color:#0266A3;
+   					color:white;
+   				}
+
+   				/*banner部分开始*/
+
+   				.banner{
+   					 height:210px;
+   					 margin-top:10px;
+   				}
+
+   				.banner_l{
+   					width:200px;
+   					height:210px;
+   					float:left;
+   				}
+
+   				.banner_l_top{
+   					 background-color:#0266A3;
+   					 height:30px;
+   					 line-height:30px;
+   					 padding-left:20px;
+   					 color:white;
+   				}
+
+   				.banner_list{
+   					 padding-top:12px;
+					 padding-left: 9px;
+					 height:168px;
+					 background-color:#EBF0F6;
+   				}
+				.banner_l li{
+					 height:27px;
+					 padding-left:30px;
+				}
+   				.banner_l li a{
+   					color:#606060;
+   				}
+
+   				.banner_l li a:hover{
+   					 text-decoration:underline;
+   					 color:#EB3709;
+   				}
+   				.one{
+   					background:url(images/icon_1.png) no-repeat left top;
+   				}
+   				.two{
+   					background:url(images/icon_2.png) no-repeat left top;
+   				}
+   				.tree{
+   					background:url(images/icon_3.png) no-repeat left top;
+   				}
+   				.four{
+   					background:url(images/icon_4.png) no-repeat left top;
+   				}
+   				.five{
+   					background:url(images/icon_5.png) no-repeat left top;
+   				}
+
+   				.six{
+   					background:url(images/icon_6.png) no-repeat left top;
+   				}
+
+   				.banner_m{
+   					 width:520px;
+   					 height:212px;
+   					 margin-left:12px;
+   					 margin-right:7px;
+
+   					 float:left;
+
+   				}
+
+   				.banner_r{
+   					 width:230px;
+   					 height:210px;
+   					 /*background-color:pink;*/
+   					 float:left;
+   				}
+
+   				.banner_r_top{
+   					 width:229px;
+   					 height:94px;
+   					/* background-color:green;*/
+   					 border:1px solid #E0E6F0;
+   				}
+                
+                .banner_r_bottom{
+                	height:93px;
+                	width:230px;
+                	margin-top: 20px;
+                }
+
+                /*建筑材料部分开始*/
+                .jzcl{
+					height:34px;
+					border-top:2px solid #C3D7E4;
+					background-color:#ECF1F7;
+					margin-top:11px;
+					line-height:34px;
+					padding-left:22px;
+					color:#444444;
+                }
+
+                /*材料列表*/
+
+				.cl_list{
+					 height:346px;
+					 margin-top: 12px;
+				}
+				.cl_l{
+					 width:722px;
+					 height:344px;
+					 border:1px solid #D8D8D8;
+					 float:left;
+					 padding-left:5px;
+				}
+
+				.cl_r{
+					 width:228px;
+					 height:344px;
+					 border:1px solid #D8D8D8;
+					 margin-left: 11px;
+					 float:left;
+				}
+
+				.cl_l_top{
+					 width:719px;
+					 height:171px;
+					 border-bottom:1px solid #EEEEEE;
+
+				}
+
+				.cl_top_left{
+					 height:143px;
+					 width:99px;
+					 margin-left:21px;
+					 float:left;
+					 margin-top:15px;
+				}
+				.cl_top_right{
+					 width:209px;
+					 height:143px;
+					/* background-color:green;*/
+					 float:left;
+					 margin-top:15px;
+					 margin-left:10px;
+				}
+
+				.cltop_top{
+					 width:94px;
+					 height:100px;
+					 border:1px solid #CACACA;
+					 line-height:100px;
+					 padding-left:3px;
+				}
+
+				.top_img{
+					 display:inline-block;
+					 vertical-align:middle;
+				}
+
+				.cltop_bottom{
+					 width:98px;
+					 height:26px;
+					 margin-top:15px;
+				}
+
+				.top_title{
+					 color:#000000;
+					 height:28px;
+					 margin-top:11px;
+					 font-size:14px;
+				}
+
+				.top_ms{
+					 color:#863E01;
+					 height:49px;
+					 font-size:14px;
+				}
+
+				.top_pic{
+					height:41px;
+
+				}
+
+				.top_pic span{
+					font-size:14px;
+					color:#C50934;
+				}
+
+				.kc span{
+					 color:#C50934;
+				}
+
+
+				.cl_r_top{
+					 height:29px;
+					 border-bottom:1px  solid #E0E6F0;
+					 background-color:#FCFCFC;
+					 line-height:29px;
+					 padding-left:15px;
+					 color:#4E4E4E;
+
+				}
+				
+				.cl_r_bottom li{
+					 height:24px;
+					 background:url(images/li_bg.png) no-repeat left 6px;
+					 padding-left:17px;
+				}
+
+				.cl_r_bottom ul{
+					 margin-top:17px;
+					 margin-left: 8px;
+				}
+
+				.cl_r_bottom  a{
+					 color:#444444;
+				}
+
+				.cl_r_bottom  a:hover{
+					 color:#F63819;
+					 text-decoration:underline;
+				}
+
+				/*儿童安全座椅*/
+				.et_list{
+					height:302px;
+					margin-top:10px;
+					padding-top:25px;
+				}
+				
+				.etlist_l{
+					 height:301px;
+					 width:722px;
+					 border:1px solid #CACACA;
+					 border-top:2px solid #00B0E7;
+					 position:relative;
+
+					 float:left;
+				}
+
+				.dw_img{
+					 position:absolute;
+					 top:-25px;
+
+				}
+
+				.dw_font{
+					 position:absolute;
+					 left:628px;
+					 top:-22px;
+
+				}
+
+				.dw_font a{
+				   color:#1A66B3;
+				   font-size:14px;
+				}
+
+				.etzy_list{
+					  width:164px;
+					  height:285px;
+					  margin-top:5px;
+					  margin-left: 5px;
+					  margin-right: 10px;
+					  float:left;
+				}
+
+				.etzy_top{
+					 width:164px;
+					 height:170px;
+				}	
+
+				.etzy_bottom{
+					 text-align:center;
+				}
+
+				.etzy_title{
+					 height:41px;
+					 margin-top:8px;
+				}
+
+				.etzy_title a{
+					 color:#333333;
+				}
+				.etzy_title a:hover{
+					 text-decoration: underline;
+					 color:#F22D12;
+				}
+
+				.etnl{
+					 height:24px;
+					 color:#999999;
+				}
+
+				.scj{
+					 color:#999999;
+					 height:27px;
+				}
+				
+				.etzy_list span{
+					 font-weight:bold;
+					 color:#A10000;
+				}
+
+				.etlist_r{
+					 width:220px;
+					 height:301px;
+					 float:right;
+				}
+				
+
+				.etlist_top{
+					 width:218px;
+					 height:128px;
+					 border:1px solid #CBCBCB;
+					 margin-bottom:2px;
+				}
+
+
+				/*工艺艺术品*/
+
+				.wz_img{
+					  width:217px;
+					  height:75px;
+					  margin-top:13px;
+					  margin-left:5px;
+					  color:#777777;
+					 
+				}
+
+				.wz_img img{
+					 display:inline-block;
+					 vertical-align:middle;
+					 float:left;
+				}
+
+
+				/*友情链接*/
+
+				.friend_link{
+					 height:72px;
+					 border-top:1px solid #DDDDDD;
+					 border-bottom:3px solid #0A7EC3;
+					 margin-top:20px;
+
+					 padding-top:30px;
+				}
+				
+				.friend_link span{
+					 float:left;
+					 line-height:20px;
+					 color:#999999;
+					 font-size:14px;
+				}
+				.friend_link li{
+					float:left;
+				}
+
+				.friend_link a{
+					 font-size:14px;
+					 color:#666666;
+					 padding:0 5px;
+				}
+
+
+				/*结尾部分*/
+
+				.footer{
+					 height:80px;
+				}
+
+				.footer_center{
+					 height:80px;
+					 width:714px;
+					 margin:0 auto;
+					 /*background-color:green;*/
+					 margin-top:18px;
+				}
+				
+				.footer_center li{
+					float:left;
+					background:url(images/footer_bg.png) no-repeat  right;
+				}
+
+				.footer_center a {
+					 font-size:14px;
+					 padding:0 5px;
+					 line-height:24px;
+					 color:#444444;
+				}
+
+				.footer_center a:hover{
+					 text-decoration:underline;
+				}
+			/*主体结束*/

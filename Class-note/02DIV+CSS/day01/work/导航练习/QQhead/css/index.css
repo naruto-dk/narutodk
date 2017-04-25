@@ -1,0 +1,109 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+ul,li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.wrap{
+	width:1000px;
+	margin: 0 auto;
+}
+.wrap .header .soso{
+	width:1000px;
+	height:90px;
+	margin: 0 auto;
+	background: #eee;
+}
+
+.selector{
+	display: none;
+}
+
+
+
+
+/*导航样式*/
+.wrap .header .nav{
+	width: 1000px;
+	height: 65px;
+	background: url(../img/nav.jpg) no-repeat;
+}
+.sub-nav{
+	position: relative;
+	float:left;
+	width:135px;
+	height:55px;
+	margin-left:12px;
+	padding-top:10px ;
+}
+.sub-nav:first-child{
+	margin-left: 20px;
+}
+
+.sub-nav:last-child{
+	width:90px;
+	height:55px;
+}
+
+.sub-nav li:nth-child(1),.sub-nav li:nth-child(4){
+	font-weight: bolder;
+}
+.last-nav li:nth-child(3){
+	font-weight: bolder;
+}
+
+.sub-nav li{
+	float:left;
+	width: 34px;
+	height:25px;
+	margin-right:10px;
+	cursor: pointer;
+}
+
+.wrap .header .nav ul li a{
+	color:#fff;
+	padding: 3px;
+	font-size:14px;
+	font-family: 'STHeiti','Microsoft YaHei','宋体','arial';
+	display: inline-block;
+	
+}
+
+.last-nav li:nth-child(4) a{
+	display: block;
+	width:40px;
+	height:20px;
+	font-weight: normal;
+}
+.wrap .header .nav ul li a:hover{
+	background:greenyellow ;
+}
+
+.last-nav ul{
+	width:45px;
+	display: none;
+}
+.last-nav ul li{
+	width:45px;
+	height:25px;
+	background:#3D95D5 ;
+	border-bottom: 1px dotted #fff;
+}
+.last-nav ul li a{
+	display: block;
+	width:40px;
+	height:20px;
+}
+.last-nav ul li a:hover{
+	background:greenyellow ;
+}
+.last-nav li:last-child:hover ul{
+	display: block;
+	/*width:45px;
+	height:25px;
+	background:#3D95D5 ;*/
+}

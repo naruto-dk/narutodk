@@ -1,0 +1,175 @@
+*{
+	margin: 0; 
+	padding:0;
+}
+
+.wrap{
+	width: 960px;
+	margin:0 auto;
+}
+
+.header{
+	border:1px solid red;
+	margin: 0 auto;
+}
+
+.header .logo{
+	width: 720px;
+	height:70px;
+}
+
+.header .nav{
+	height:60px;
+	display: none;
+}
+
+/*banner css*/
+.wrap .banner{
+	width: 960px;
+	text-align: center;
+/*	border: 1px dashed red;*/
+	margin:10px auto;
+	float:left
+}
+
+
+
+.wrap .banner .model{
+	float:left;
+	width:450px;
+	height: 320px;
+	margin: 10px;
+	padding: 3px;
+	/*border: 1px dashed olive;*/
+}
+
+
+
+.wrap .banner .model figure{
+	position: relative;
+	float: left;
+	overflow: hidden;
+	text-align: center;
+}
+.wrap .banner .model img{
+	width: 450px;
+	height:310px;
+}
+.wrap .banner .bannerrow{
+	margin: 0 auto;
+}
+
+.wrap .banner .bannerrow .model{
+	/*float:left;*/
+	width: 290px;
+	height:200px;
+	margin: 10px;
+}
+.wrap .banner .bannerrow img{
+	width: 290px;
+	height:200px
+}
+
+
+figcaption p {
+   font-size:16px;
+   line-height: 20px;
+    width:310px;
+    margin: 0 auto;
+   
+}
+.bannerrow figcaption p{
+	width:200px;
+    margin: 0 auto;
+}
+
+.model figure figcaption {
+	padding: 20px;
+	color: #fff;
+	backface-visibility: hidden;
+}
+.model figure figcaption::before,
+.model figure figcaption::after {
+	pointer-events: none;
+}
+
+.model figure figcaption{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 400px;
+	height:270px;
+}
+.banner .model figure figcaption{
+	position: absolute;
+	top: 15px;
+	left: 30px;
+	width: 360px;
+	height:240px;
+}
+.bannerrow{
+	margin: 0 auto;
+}
+
+.bannerrow .model figure figcaption{
+	position: absolute;
+	top: -8px;
+	left: 0;
+	width: 250px;
+	height:180px;
+}
+figure.effect-bubba {
+	background: #000;
+}
+figure.effect-bubba:hover img {
+	opacity: 0.3;
+}
+figure.effect-bubba figcaption::before,
+figure.effect-bubba figcaption::after {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	bottom: 30px;
+	left: 30px;
+	content: '';
+	opacity: 0;
+	transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.effect-bubba figcaption::before {
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	transform: scale(0,1);
+}
+
+figure.effect-bubba figcaption::after {
+	border-right: 1px solid #fff;
+	border-left: 1px solid #fff;
+	transform: scale(1,0);
+}
+
+figure.effect-bubba h4 {
+	padding-top: 15px;
+	transition: transform 0.35s;
+	transform: translate3d(0,-20px,0);
+	opacity:0;
+}
+
+figure.effect-bubba p {
+	padding: 12px 2.5em;
+	opacity: 0;
+	transition: opacity 0.35s, transform 0.35s;
+	transform: translate3d(0,20px,0);
+}
+
+figure.effect-bubba:hover figcaption::before,
+figure.effect-bubba:hover figcaption::after {
+	opacity: 1;
+	transform: scale(1);
+}
+
+figure.effect-bubba:hover h4,
+figure.effect-bubba:hover p {
+	opacity: 1;
+	transform: translate3d(0,0,0);
+}

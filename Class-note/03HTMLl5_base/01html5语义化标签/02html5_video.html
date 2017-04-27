@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<video width="800" height="400" controls autoplay>
+			<source src="video/movie.mp4" type="video/mp4"></source>
+			<source src="video/movie.ogv" type="video/ogg"></source>
+			<source src="video/movie.webm" type="video/webm"></source>
+			<object width="" height="" type="application/x-shockwave-flash" data="video/movie.mp4">
+				<param name="movie" value="video/movie.mp4" />
+				<param name="flashvars" value="autostart=true&amp;file=video/movie.mp4" />
+			</object>
+			
+			<object width="420" height="360"
+				classid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B"
+				codebase="http://www.apple.com/qtactivex/qtplugin.cab">
+				<param name="src" value="video/movie.mp4" />
+				<param name="controller" value="true" />
+			</object>
+			当前浏览器不支持 video直接播放，点击这里下载视频： <a href="video/movie.mp4">下载视频</a>
+		</video>
+	</body>
+</html>

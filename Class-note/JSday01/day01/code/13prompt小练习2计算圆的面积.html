@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			p{
+				font:20px/30px "microsoft yahei";
+			}
+			span{
+				
+				height: 30px;
+				padding: 0 10px;
+				display: inline-block;
+				border:1px solid #000000;
+				text-align:center;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>请计算圆形的面积</h1>
+		<p>边长为<span id="m">0</span>厘米的圆形面积是<span id="area"></span>平方厘米</p>
+		<script type="text/javascript">
+			var value=prompt("请输入圆形的边长：");
+			var m=document.getElementById("m");
+			var m2=document.getElementById("area");
+			m.innerHTML=value;
+			m2.innerHTML=Math.PI*value*value;
+			//面积保留两位小数
+			m2.innerHTML=(Math.PI*value*value).toFixed(2);
+		</script>
+	</body>
+</html>
+<!--
+	π
+-->

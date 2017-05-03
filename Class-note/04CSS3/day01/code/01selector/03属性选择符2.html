@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/*E[att^="val"] { sRules }*/
+			/*选择具有att属性且属性值为以val开头的字符串的E元素。*/
+			div[class^="a"]{
+				width: 100px;
+				height: 100px;
+				border:1px solid red;
+			}
+			/*E[att$="val"] { sRules }*/
+			/*选择具有att属性且属性值为以val结尾的字符串的E元素。*/
+			div[class$="c"]{
+				background: #0000FF;
+			}
+			/*E[att*="val"] { sRules }*/
+			/*选择具有att属性且属性值为包含val的字符串的E元素。*/
+			div[class*="b"]{
+				color:#FF0000
+			}
+		</style>
+	</head>
+	<body>
+		<div class="abc">1</div>
+		<div class="acb">2</div>
+		<div class="bac">3</div>
+	</body>
+</html>

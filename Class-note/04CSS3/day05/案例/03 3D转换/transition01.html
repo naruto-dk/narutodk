@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.box1{margin: 50px auto;width: 100px;height:100px;background: #f00;transition: all 1s ;}
+			.box1:hover{width: 200px;height: 200px;border-radius: 50%;background:#666;transition: all 1s ease-in 1s;
+						/*transition-property: width,height,border-radius;
+						transition-duration: 1s;
+						transition-timing-function: ease-in;
+						transition-delay: 1s;*/
+			}
+			.box2{margin: 50px auto;height: 100px;width: 100px;background: #f00;}
+			.box2:hover{
+				-webkit-animation: hover 1s ease-in infinite;
+				/*-webkit-animation-name: hover;
+				-webkit-animation-duration: 1s;
+				-webkit-animation-timing-function: ease-in;
+				-webkit-animation-iteration-count: infinite;*/
+			}
+			@-webkit-keyframes hover{
+				0%{width: 100px;height: 100px;border-radius: 50%;}
+				50%{width: 200px;height: 200px;border-radius: 50%;}
+				100%{width: 100px;height: 100px;border-radius: 50%;}
+			}
+			/*transfrom*/
+			.transfrom{
+				width: 1000px;
+				background: #FDFDFD;
+				margin: 5px auto;
+			}
+			.transfrom:after{
+				clear: both;
+				content: '';
+				display: block;
+			}
+			.transfrom>p{
+				width: 230px;
+				float: left;
+				border: 1px solid #999999;
+				margin-right: 10px;
+				text-align: center;
+				padding-bottom: 10px;		
+			}
+			.transfrom>p strong{
+				display: block;
+				background: #eee;
+				line-height: 28px;
+				font-size
+				font-family: "microsoft yahei";
+				color: #333333;
+				margin-bottom: 10px;
+			}
+			.transfrom>p span{
+				display: block;
+				width: 100px;
+				height: 100px;
+				margin: 0 auto;
+				border: 1px solid #CCCCCC;
+				background: #09f;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1"></div>
+		<hr />
+		<div class="box2"></div>
+		<hr />
+		<div class="transfrom">
+			<p>
+				<strong>旋转（rotate）</strong>
+				<span class="rotate"></span>
+			</p>
+			<p>
+				<strong>移动（translate）</strong>
+				<span class="translate"></span>
+			</p>
+			<p>
+				<strong>缩放（scale）</strong>
+				<span class="scale"></span>
+			</p>
+			<p>
+				<strong>扭曲（skew）</strong>
+				<span class="skew"></span>
+			</p>
+		</div>
+	</body>
+</html>

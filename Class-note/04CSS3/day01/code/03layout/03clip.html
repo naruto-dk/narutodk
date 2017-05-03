@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/*clip*/
+			/*检索或设置对象的可视区域。区域外的部分是透明的。*/
+			/*适用于：绝对定位元素*/
+			/*必须将position的值设为absolute或者fixed，此属性方可使用。*/
+			.test {
+				width:300px;
+				height:200px;
+				border: 1px solid #FF0000;
+				position: absolute;
+				height: 50px;
+				line-height: 50px;
+				/*clip: rect(0 auto 35px 2em);
+				clip: rect(0, auto, 35px, 2em);
+				clip-path: circle(15px at 20px 20px);*/
+				background: #008000;
+			}
+			
+			.test2 {
+				width:300px;
+				height:200px;
+				border: 1px solid #FF0000;
+				height: 50px;
+				line-height: 50px;
+				background: #eee;
+				margin-left: 310px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="test">
+			我就是DIV中的文字
+		</div>
+		<div class="test2">
+			我就是DIV中的文字
+		</div>
+	</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index2.css"  id="link"/>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="state">
+				<h2>全新学习引擎V2017</h2>
+				<p>从外在到实力的完美提升！</p>
+				<p>外在形象、身份特质、技术实力、学习能力、社交人脉</p>
+				<p>全方位五维度为你的学习保驾护航！</p>
+				<p>跟班班学院一起努力，</p>
+				<p>成为更好的自己！</p>
+				<p>
+					<i class="ora_1"></i>
+					<a class="btn" href="#" target="_blank" >立即体验全新学习引擎V2017</a>
+				</p>
+			</div>
+			<div class="media">
+				<i class="ora_1"></i>
+				<i class="ora_2"></i>
+				<i class="ora_3"></i>
+				<i class="blue_1"></i>
+				<i class="blue_2"></i>
+				<i class="blue_3"></i>
+				<i class="red_1"></i>
+				<i class="red_2"></i>
+				<i class="green_1"></i>
+				<i class="green_2"></i>
+				<i class="green_3"></i>
+			</div>
+		</div>
+		<div class="control" style="width:100px;margin: 0 auto;">
+			<button id="btn1">动画</button>
+		</div>
+		<script type="text/javascript">
+			var oBtn=document.getElementById("btn1");
+			var link=document.getElementById("link");
+			var on=true;
+			oBtn.onclick=function(){
+				if(on){
+					link.href="css/index.css";
+					on=!on;
+				}else{
+					link.href="css/index2.css";
+					on=!on;
+				}
+			}
+		</script>
+	</body>
+</html>

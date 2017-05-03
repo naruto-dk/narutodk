@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {margin: 0; padding: 0;}
+        .demo {
+            width: 1030px;
+            margin: 50px auto;
+        }
+        .list {
+            border-radius: 15px;
+            overflow: hidden;
+            width: 300px;
+            height: 200px;
+            float: left;
+            margin: 20px;
+            position: relative;
+        }
+        .list div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: rotate(-100deg);
+            transform-origin: top left; /* 旋转中心点*/
+            transition: all .8s;
+        }
+        .current div {
+            transform: rotate(0deg);
+        }
+        .list div.top {
+            transform-origin: top left;
+        }
+        .list div.right {
+            transform-origin: top right;
+        }
+        .list div.bottom {
+            transform-origin: bottom right;
+        }
+        .list div.left {
+            transform-origin: bottom left;
+        }
+    </style>
+</head>
+<body>
+<div class="demo">
+    <div class="list">
+        <img src="images/00.jpg" alt=""/>
+        <div>
+            <img src="images/1.jpg" alt=""/>
+        </div>
+    </div>
+    <div class="list">
+        <img src="images/00.jpg" alt=""/>
+        <div>
+            <img src="images/2.jpg" alt=""/>
+        </div>
+    </div>
+    <div class="list">
+        <img src="images/00.jpg" alt=""/>
+        <div>
+            <img src="images/3.jpg" alt=""/>
+        </div>
+    </div>
+    <div class="list">
+        <img src="images/00.jpg" alt=""/>
+        <div>
+            <img src="images/4.jpg" alt=""/>
+        </div>
+    </div>
+    <div class="list">
+        <img src="images/00.jpg" alt=""/>
+        <div>
+            <img src="images/5.jpg" alt=""/>
+        </div>
+    </div>
+    <div class="list">
+        <img src="images/00.jpg" alt=""/>
+        <div>
+            <img src="images/6.jpg" alt=""/>
+        </div>
+    </div>
+    <div class="list">
+        <img src="images/00.jpg" alt=""/>
+        <div>
+            <img src="images/7.jpg" alt=""/>
+        </div>
+    </div>
+    <div class="list">
+        <img src="images/00.jpg" alt=""/>
+        <div>
+            <img src="images/8.jpg" alt=""/>
+        </div>
+    </div>
+    <div class="list">
+        <img src="images/00.jpg" alt=""/>
+        <div>
+            <img src="images/9.jpg" alt=""/>
+        </div>
+    </div>
+</div>
+</body>
+</html>

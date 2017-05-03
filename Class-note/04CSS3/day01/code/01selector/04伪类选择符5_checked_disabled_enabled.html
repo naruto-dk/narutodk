@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/*E:checked { sRules }*/
+			/*匹配用户界面上处于选中状态的元素E。(用于input type为radio与checkbox时)*/
+			input:checked + span {
+				background: #f00;
+			}
+			input:checked + span:after {
+				content: " 我被选中了";
+			}
+			
+			/*E:enabled { sRules }*/
+			/*匹配用户界面上处于可用状态的元素E。*/
+			input[type="text"]:enabled {
+				border: 1px solid #090;
+				background: #fff;
+				color: #000;
+			}
+			
+			/*E:disabled { sRules }*/
+			/*匹配用户界面上处于禁用状态的元素E。*/
+			input[type="text"]:disabled {
+				border: 1px solid #ccc;
+				background: #eee;
+				color: #ccc;
+			}
+		</style>
+	</head>
+	<body>
+		<form method="post" action="#">
+			<fieldset>
+				<legend>选中下面的项试试</legend>
+				<ul>
+					<li><label><input type="radio" name="colour-group" value="0" /><span>蓝色</span></label></li>
+					<li><label><input type="radio" name="colour-group" value="1" /><span>红色</span></label></li>
+					<li><label><input type="radio" name="colour-group" value="2" /><span>黑色</span></label></li>
+				</ul>
+			</fieldset>
+			<fieldset>
+				<legend>选中下面的项试试</legend>
+				<ul>
+					<li><label><input type="checkbox" name="colour-group2" value="0" /><span>蓝色</span></label></li>
+					<li><label><input type="checkbox" name="colour-group2" value="1" /><span>红色</span></label></li>
+					<li><label><input type="checkbox" name="colour-group2" value="2" /><span>黑色</span></label></li>
+				</ul>
+			</fieldset>
+		</form>
+		<hr />
+		<form method="post" action="#">
+			<fieldset>
+				<legend>E:enabled与E:disabled</legend>
+				<ul>
+					<li><input type="text" value="可用状态" /></li>
+					<li><input type="text" value="可用状态" /></li>
+					<li><input type="text" value="禁用状态" disabled="disabled" /></li>
+					<li><input type="text" value="禁用状态" disabled="disabled" /></li>
+				</ul>
+			</fieldset>
+		</form>
+	</body>
+</html>

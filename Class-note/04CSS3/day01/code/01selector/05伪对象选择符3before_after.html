@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/*E:before/E::before { sRules }*/
+			/*设置在对象前（依据对象树的逻辑结构）发生的内容。用来和content属性一起使用，并且必须定义content属性
+			CSS3将伪对象选择符(Pseudo-Element Selectors)前面的单个冒号(:)修改为双冒号(::)用以区别伪类选择符(Pseudo-Classes Selectors)，但以前的写法仍然有效。
+			即E:before可转化为E::before*/
+			p{position:relative;color:#f00;font-size:14px;font-size:0\9;*font-size:14px;}
+			p:before{position:absolute;background:#fff;color:#000;content:"如果你的能看到这段文字，说明你的浏览器只支持E:before";font-size:14px;}
+			p::before{position:absolute;background:#fff;color:#000;content:"如果你的能看到这段文字，说明你的浏览器支持E:before和E::before";font-size:14px;}
+		
+			/*E:after/E::after { sRules }*/
+			/*设置在对象后（依据对象树的逻辑结构）发生的内容。用来和content属性一起使用，并且必须定义content属性
+			CSS3将伪对象选择符(Pseudo-Element Selectors)前面的单个冒号(:)修改为双冒号(::)用以区别伪类选择符(Pseudo-Classes Selectors)，但以前的写法仍然有效。
+			即E:after可转化为E::after*/
+			
+			p:after{position:absolute;left:0;background:#fff;color:#000;content:"如果你的能看到这段文字，说明你的浏览器只支持E:after";font-size:14px;}
+			p::after{position:absolute;left:0;background:#fff;color:#000;content:"如果你的能看到这段文字，说明你的浏览器支持E:after和E::after";font-size:14px;}
+		
+		/*思考*/
+			div{
+				width: 100px;
+				height: 100px;
+				margin: 0 auto;
+				font:20px/100px "微软雅黑";
+				text-align:center;
+				background: #00BFFF;
+				position: relative;
+			}
+			div:before{
+				width: 100px;
+				height: 100px;
+				background: #FF0000;
+				position: absolute;
+				content: '';
+				left:-100px;
+			}
+			div:after{
+				width: 100px;
+				height: 100px;
+				background: #008000;
+				border-radius: 50%;
+				position: absolute;
+				content: '';
+				left:100px;
+			}
+			.clear {
+			    clear: both;
+			    overflow: hidden;
+			    font-size: 0;
+			    height: 0;
+			    line-height: 0
+			}
+			.clearfix:after {
+			    content: ".";
+			    display: block;
+			    height: 0;
+			    clear: both;
+			    visibility: hidden;
+			}
+			.clearfix {
+			    *zoom:1;
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		<p>Sorry, 你的浏览器不支持E:before和E::before</p>
+		
+		<div>111</div>
+		<div class="clearfix"></div>
+		
+	</body>
+</html>
+<!--
+	display:none 与 visibility: hidden 区别
+	display:block 与 visibility: visible 区别
+-->

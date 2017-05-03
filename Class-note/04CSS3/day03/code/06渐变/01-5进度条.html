@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+.wrap{
+	width:1000px;
+	height:30px;
+	overflow:hidden;
+	border:1px solid #000;
+	}
+.box{
+	width:400px;
+	height:30px;
+	background:-webkit-repeating-linear-gradient(0deg,red 0,green 200px,#fff 300px,blue 400px); 
+	background:-moz-repeating-linear-gradient(0deg,red 0,green 200px,#fff 300px,blue 400px); 
+	background:-o-repeating-linear-gradient(0deg,red 0,green 200px,#fff 300px,blue 400px); 
+	transition:3s;
+	}
+.wrap:hover .box{ 
+	margin-left:-100px;
+	}
+</style>
+</head>
+<body>
+<div class="wrap">
+	<div class="box"></div>
+</div>
+</body>
+</html>

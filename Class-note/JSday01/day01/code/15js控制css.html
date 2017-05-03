@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				width: 100px;
+				height: 100px;
+				background: #0066CC;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box"  id="box"></div>
+		<input type="text" name="" id="width" placeholder="宽"/>
+		<input type="text" name="" id="height" placeholder="高"/>
+		<button id="btn">确定</button>
+		<script type="text/javascript">
+			var oW=document.getElementById("width");
+			var oH=document.getElementById("height");
+			var oBtn=document.getElementById("btn");
+			var oBox=document.getElementById("box");
+			oBtn.onclick=function(){
+				oBox.style.width=oW.value+'px';
+				oBox.style.height=oH.value+'px';
+				console.log(oW.value);
+				console.log(oH.value);
+			}
+		</script>
+	</body>
+</html>
+<!--
+	demo要求
+	左边展示图形的大小
+	右边可以输入图形的长 宽 
+	输出图形面积
+	
+-->

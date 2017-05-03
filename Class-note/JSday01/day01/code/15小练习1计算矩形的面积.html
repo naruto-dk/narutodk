@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.wrap{
+				width: 1200px;
+				height: 800px;
+				border:1px solid #000000;
+				margin: 100px auto;
+			}
+			.left{
+				width: 600px;
+				height: 600px;
+				border:1px solid #008000;
+				margin: 100px;
+				float: left;
+			}
+			.control{
+				width: 200px;
+				height: 200px;
+				border:1px solid #008000;
+				float: right;
+				margin: 100px 50px ;
+			}
+			.box{
+				width: 100px;
+				height: 100px;
+				background: #0066CC;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="left">
+				<div class="box"  id="box"></div>
+			</div>
+			<div class="control">
+				<input type="text" name="" id="width" placeholder="宽"/>
+				<input type="text" name="" id="height" placeholder="高"/>
+				这个形状的面积是：<span id="area"></span>
+				<button id="btn">确定</button>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var oW=document.getElementById("width");
+			var oH=document.getElementById("height");
+			var oBtn=document.getElementById("btn");
+			var oBox=document.getElementById("box");
+			var m2=document.getElementById("area");
+			oBtn.onclick=function(){
+				oBox.style.width=oW.value+'px';
+				oBox.style.height=oH.value+'px';
+				m2.innerHTML=oW.value*oH.value;
+				console.log(oW.value);
+				console.log(oH.value);
+			}
+		</script>
+	</body>
+</html>
+<!--
+	demo要求
+	左边展示图形的大小
+	右边可以输入图形的长 宽 
+	输出图形面积
+	
+-->

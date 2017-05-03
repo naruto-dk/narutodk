@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> CSS3 实现 完成图形挤压变形动画特效</title>
+		<script type="text/javascript" src="js/jquery-3.1.0.min.js" ></script>
+		<style>
+		
+			.box{
+				width: 720px;
+				margin: 50px auto;
+				background: #000;
+				-webkit-filter: blur(15px) saturate(800%);
+				cursor: none;
+				transform-style: preserve-3d;
+			}
+			.box:after{
+				clear: both;
+				content: '';
+				display: block;
+				overflow: hidden;
+			}
+			.box span{
+				float: left;
+				width: 80px;
+				height:60px;
+				border-radius: 100%;
+				background-color: #f00;
+				margin: 20px;
+				transform: translateZ(0);
+			}
+			.box .repulse{
+				display: block;
+				width: 80px;
+				height:60px;
+				border-radius: 100%;
+				background-color: #add8e6;
+				position: absolute;
+				-webkit-filter: saturate(500%);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<i class="repulse"></i>
+		</div>
+	<script type="text/javascript">
+		$(document).on('mousemove', function(event){
+			$('.repulse').css({
+				left: event.pageX,
+				top: event.pageY
+			});
+		});
+	</script>
+	</body>
+</html>

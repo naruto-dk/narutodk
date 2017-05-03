@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				width: 400px;
+				height: 200px;
+				background: #008000;
+				float:left;
+				margin-right: 20px;
+			}
+			.box:last-child{
+				transform: rotate(30deg);
+				-ms-transform:rotate(30deg); /* IE 9 */
+				-webkit-transform:rotate(30deg); /* Safari and Chrome */
+				
+				transform: translate(100px,200px);
+				-ms-transform: translate(100px,200px); /* IE 9 */
+				-webkit-transform: translate(100px,200px); /* Safari and Chrome */
+				
+				
+				-ms-transform:scale(.5,1); /* IE 9 */
+				-webkit-transform: scale(.5,1); /* Safari */
+				transform: scale(.5,1); /* 标准语法 */
+				
+				
+				transform: skew(30deg,20deg);
+				-ms-transform: skew(30deg,20deg); /* IE 9 */
+				-webkit-transform: skew(30deg,20deg); /* Safari and Chrome */
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+		<div class="box"></div>
+	</body>
+</html>

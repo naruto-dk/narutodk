@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				background: #666666;
+			}
+			nav{
+				width: 1200px;
+				height: 50px;
+				margin: 0 auto;
+			}
+			ul{
+				position: fixed;
+				width: 1200px;
+				height: 50px;
+				background:#ccc;
+			}
+			li{
+				list-style: none;
+				float: left;
+			}
+			a{
+				display: block;
+				float: left;
+				font:20px/50px "microsoft yahei";
+				text-align: center;
+				text-decoration: none;
+				padding: 0 10px;
+				background: #FF9900;
+				margin-right: 1px;
+			}
+			.side{
+				position: fixed;
+				right:0;
+			}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<ul>
+				<li><a href="">首页</a></li>
+				<li><a href="">新闻中心</a></li>
+				<li><a href="">产品列表</a></li>
+				<li><a href="">联系我们</a></li>
+				<li><a href="">公司地址</a></li>
+			</ul>
+		</nav>
+		<div class="side">
+			<img src="side.png"/>
+		</div>
+		<script type="text/javascript">
+			for(var i=0;i<300;i++){
+				document.write(i+"<br/>");
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{margin: 0; padding: 0;}
+        *::before,*::after {
+            box-sizing: border-box;
+        }
+        body {
+            text-align: center;
+        }
+        nav {
+            display: inline-block;
+            margin-top: 100px;
+        }
+        nav a {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            perspective: 200px;
+        }
+        nav a span {
+            line-height: 40px;
+            background-color: #2195de;
+            display: inline-block;
+            padding: 0 25px;
+            position: relative;
+            transform-origin: top;
+            transition: all 1s;
+            transform-style: preserve-3d;
+        }
+        nav a span::after {
+            content: attr(data-hover);   /* attribute 自定义属性 的值*/
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #0965a0;
+            width: 100%;
+            height: 100%;
+            transform: rotateX(-90deg);  /* 往下翻转  是 负值 */
+            transform-origin: top;
+        }
+        nav a:hover span {
+            transform: rotateX(90deg) translateY(-20px);    /*网上翻转是正值*/
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <a href="#">
+        <span data-hover="前端学院">快腾学院</span>
+    </a>
+    <a href="#">
+        <span data-hover="面向对象">快腾学院</span>
+    </a>
+    <a href="#">
+        <span data-hover="前端学院">快腾学院</span>
+    </a>
+    <a href="#">
+        <span data-hover="面向对象">快腾学院</span>
+    </a>
+    <a href="#">
+        <span data-hover="前端学院">快腾学院</span>
+    </a>
+    <a href="#">
+        <span data-hover="面向对象">快腾学院</span>
+    </a>
+    <a href="#">
+        <span data-hover="前端学院">快腾学院</span>
+    </a>
+    <a href="#">
+        <span data-hover="面向对象">快腾学院</span>
+    </a>
+</nav>
+</body>
+</html>

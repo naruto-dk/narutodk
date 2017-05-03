@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>CSS3实现3D陀螺旋转动画</title>
+		<style>
+			.wrap{
+				width: 200px;
+				height:400px;
+				margin:30px auto;
+			}
+			@keyframes tuoluo{
+				0%{
+					transform: rotateY(0deg) rotateX(0deg);
+				}
+				50%{
+					transform: rotateY(-180deg) rotateX(18deg);
+				}
+				100%{
+					transform: rotateY(-360deg) rotateX(0deg);
+				}
+			}
+			.wrap .tuoluo{
+				width: 100%;
+				height:100%;
+				transform-style: preserve-3d;
+				animation: tuoluo 3s linear infinite;
+			}
+			.wrap .tuoluo .tuoluo-top,.tuoluo-bottom{
+				position: relative;
+				width: 100%;
+				height:50%;
+			}
+			.tuoluo-top .face-top{
+				width:0;
+				height:0;
+				position: absolute;
+				border-style: solid;
+				border-color: transparent;
+				border-width: 0 50px 170px 50px;
+				border-bottom-color: rgba(65,92,162,.5);
+				transform-origin: center bottom;
+				top:29px;
+			}
+			.tuoluo-top .face-top:nth-of-type(1){
+				transform: rotateY(0deg) translateZ(88px) rotateX(31deg)  ;
+			}
+			.tuoluo-top .face-top:nth-of-type(2){
+				transform: rotateY(60deg) translateZ(88px) rotateX(31deg)  ;
+			}
+			.tuoluo-top .face-top:nth-of-type(3){
+				transform: rotateY(120deg)translateZ(88px) rotateX(31deg)  ;
+			}
+			.tuoluo-top .face-top:nth-of-type(4){
+				transform: rotateY(180deg)translateZ(88px) rotateX(31deg)  ;
+			}
+			.tuoluo-top .face-top:nth-of-type(5){
+				transform: rotateY(240deg)translateZ(88px) rotateX(31deg)  ;
+			}
+			.tuoluo-top .face-top:nth-of-type(6){
+				transform: rotateY(300deg)translateZ(88px) rotateX(31deg)  ;
+			}
+			
+			.tuoluo-bottom .face-bottom{
+				width:0;
+				height:0;
+				position: absolute;
+				border-style: solid;
+				border-color: transparent;
+				border-width: 170px 50px 0 50px;
+				border-top-color: rgba(167,92,162,.5);
+				transform-origin: center top;
+			}
+			.face-bottom:nth-of-type(1){
+				transform: rotateY(0deg) translateZ(88px) rotateX(-31deg)  ;
+			}
+			.face-bottom:nth-of-type(2){
+				transform: rotateY(60deg) translateZ(88px) rotateX(-31deg)  ;
+			}
+			.face-bottom:nth-of-type(3){
+				transform: rotateY(120deg) translateZ(88px) rotateX(-31deg)  ;
+			}
+			.face-bottom:nth-of-type(4){
+				transform: rotateY(180deg) translateZ(88px) rotateX(-31deg)  ;
+			}
+			.face-bottom:nth-of-type(5){
+				transform: rotateY(240deg) translateZ(88px) rotateX(-31deg)  ;
+			}
+			.face-bottom:nth-of-type(6){
+				transform: rotateY(300deg) translateZ(88px) rotateX(-31deg)  ;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="tuoluo">
+				<div class="tuoluo-top">
+					<div class="face-top"></div>
+					<div class="face-top"></div>
+					<div class="face-top"></div>
+					<div class="face-top"></div>
+					<div class="face-top"></div>
+					<div class="face-top"></div>
+				</div>
+				<div class="tuoluo-bottom">
+					<div class="face-bottom"></div>
+					<div class="face-bottom"></div>
+					<div class="face-bottom"></div>
+					<div class="face-bottom"></div>
+					<div class="face-bottom"></div>
+					<div class="face-bottom"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

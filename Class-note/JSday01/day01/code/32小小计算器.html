@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h1>计算器</h1>
+		<input type="text" name="" id="num1" />
+		
+		<!--<select name="">
+			<option value="">+</option>
+			<option value="">-</option>
+			<option value="">*</option>
+			<option value="">/</option>
+		</select>-->
+		<input type="text" name="" id="num2" />
+		<button id="jian">-</button>
+		<p>计算结果是：<span id="result"></span></p>
+		<script type="text/javascript">
+			var num1=document.getElementById("num1");
+			var num2=document.getElementById("num2");
+			var oResult=document.getElementById("result");
+			var jian=document.getElementById("jian");
+			
+			jian.onclick=function(){
+				var result=num1.value-num2.value;
+				oResult.innerHTML=result;
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/*E:not(s) { sRules }*/
+			/*匹配不含有s选择符的元素E。
+			有了这个选择符，那么你将可以很好的处理类似这样的场景：假定有个列表，每个列表项都有一条底边线，但是最后一项不需要底边线*/
+			p:not(.abc){
+				color:red;
+			}
+			/*E:root { sRules }*/
+			/*匹配E元素在文档的根元素。在HTML中，根元素永远是HTML*/
+			html:root{
+				color: #0000FF;
+			}
+			
+			
+			.test {
+				color: black;
+				color: yellow\0;
+				*color: blue;
+				_color: red;
+			}
+			html:root .test {
+				color: purple\0;
+			}
+			
+			/*E:empty { sRules }*/
+			/*匹配没有任何子元素（包括text节点）的元素E。*/
+			.div p{
+				height: 25px;
+				border: 1px solid #0000FF;
+				background: #eee;
+			}
+			.div p:empty{
+				height: 0;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<p class="abc">否定伪类选择符 E:not(s)</p>
+		<p id="abc">否定伪类选择符 E:not(s)</p>
+		<p class="abcd">否定伪类选择符 E:not(s)</p>
+		<p>否定伪类选择符 E:not(s)</p>
+		
+		<h1 class="test">15151</h1>
+		
+		<div class="div">
+			<p></p>
+			<p>结构性伪类选择符 E:empty</p>
+			<p><!--我是一个空节点p，请注意我与其它非空节点p的外观有什么不一样--></p>
+			<p>结构性伪类选择符 E:empty</p>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/*E[att] { sRules }*/
+			/*选择具有att属性的E元素。*/
+			a[title]{
+				color:red;
+			}
+			a[class]{
+				background: #009900;
+			}
+			/*E[att="val"] { sRules }*/
+			/*选择具有att属性且属性值等于val的E元素。*/
+			a[title="jd"]{
+				background: #000000;
+			}
+			/*E[att~="val"] { sRules }*/
+			/*选择具有att属性且属性值为一用空格分隔的字词列表，其中一个等于val的E元素（包含只有一个值且该值等于val的情况）。*/
+			div[class~="box1"]{
+				width: 100px;
+				height: 100px;
+				border: 2px solid #000333;
+			}
+			/*E[att|="val"] { sRules }*/
+			/*选择具有att属性且属性值为以val开头并用连接符"-"分隔的字符串的E元素，如果属性值仅为val，也将被选择。*/
+			div[class|="wrap2"]{
+				width: 100px;
+				height: 100px;
+				border: 2px solid #FF1493;
+			}
+		</style>
+	</head>
+	<body>
+		<a href="http://www.baidu.com" title="baidu" class="baidu">百度</a>
+		<a href="http://www.jd.com" title="jd">京东</a>
+		<a href="http://www.ganji.com" title="ganji">赶集</a>
+		<a href="http://www.58.com" title="58">58</a>
+		<hr />
+		
+		<div class="wrap">
+			<div class="box box1"></div>
+			<div class="box box2"></div>
+			<div class="box box3"></div>
+			<div class="box box4"></div>
+			<div class="box box5"></div>
+		</div>
+		<hr />
+		<div class="wrap3">
+			<div class="wrap2">1</div>
+			<div class="wrap2-box"></div>
+			<div class="wrap2-box"></div>
+			<div class="wrap2-box"></div>
+			<div class="wrap2-box"></div>
+			<div class="wrap2-box"></div>
+		</div>
+	</body>
+</html>

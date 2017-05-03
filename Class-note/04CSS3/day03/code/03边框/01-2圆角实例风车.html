@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.wrap{
+				width: 400px;
+				height:400px;
+				margin:100px auto;
+				transition: 1s linear;
+			}
+			.wrap div{
+				width: 180px;
+				height: 180px;
+				margin: 10px;
+				border:1px solid #000;
+				float:left;
+				background: url(images/timg.jpg) no-repeat;
+				background-size:100% ;
+				box-sizing: border-box;
+			}
+			.box:nth-child(1),
+			.box:nth-child(4){
+				border-radius:0 70% ;
+			}
+			.box:nth-child(2),
+			.box:nth-child(3){
+				border-radius:70% 0;
+			}
+			.wrap:hover{
+				transform: rotate(720deg);
+				-moz-transform:rotate(720deg);
+				-webkit-transform: rotate(720deg);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+		</div>
+	</body>
+</html>

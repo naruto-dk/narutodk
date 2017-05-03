@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/*E:first-of-type { sRules }*/
+			/*匹配同类型中的第一个同级兄弟元素E。
+			要使该属性生效，E元素必须是某个元素的子元素，E的父元素最高是html，即E可以是html的子元素，也就是说E可以是body
+			该选择符总是能命中父元素的第1个为E的子元素，不论第1个子元素是否为E*/
+			.test p:first-of-type{
+				color:#0000FF;
+			}
+			
+			/*E:last-of-type { sRules }*/
+			/*匹配同类型中的最后一个同级兄弟元素E。
+			要使该属性生效，E元素必须是某个元素的子元素，E的父元素最高是html，即E可以是html的子元素，也就是说E可以是body
+			该选择符总是能命中父元素的倒数第1个为E的子元素，不论倒数第1个子元素是否为E*/
+			.test p:last-of-type{
+				background: #008000;
+			}
+			
+			/*E:only-of-type { sRules }*/
+			/*匹配同类型中的唯一的一个同级兄弟元素E。
+			要使该属性生效，E元素必须是某个元素的子元素，E的父元素最高是html，即E可以是html的子元素，也就是说E可以是body
+			该选择符总是能命中父元素的唯一同类型子元素E，不论该元素的位置*/
+			p:only-of-type{
+				font-size: 40px;
+			}
+			
+			/*E:nth-of-type(n) { sRules }*/
+			/*匹配同类型中的第n个同级兄弟元素E。
+			要使该属性生效，E元素必须是某个元素的子元素，E的父元素最高是html，即E可以是html的子元素，也就是说E可以是body
+			该选择符总是能命中父元素的第n个为E的子元素，不论第n个子元素是否为E*/
+			.test3 p:nth-of-type(2n){
+				color:#00FFFF
+			}
+			
+			/*E:nth-last-of-type(n) { sRules }*/
+			/*匹配同类型中的倒数第n个同级兄弟元素E。
+			要使该属性生效，E元素必须是某个元素的子元素，E的父元素最高是html，即E可以是html的子元素，也就是说E可以是body
+			该选择符总是能命中父元素的倒数第n个为E的子元素，不论倒数第n个子元素是否为E*/
+			.test3 p:nth-last-of-type(1){
+				background: #FF0000;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="test">
+			<div>我是一个div元素</div>
+			<p>我是一个p元素</p>
+			<p>我是一个p元素</p>
+			<p>我是一个p元素</p>
+			<p>我是一个p元素</p>
+		</div>
+		<hr />
+		<div class="test2">
+			<p>结构性伪类选择符 E:only-of-type</p>
+		</div>
+		<hr />
+		<div class="test3">
+			<div>我是一个div元素</div>
+			<p>我是一个p元素</p>
+			<p>我是一个p元素</p>
+			<div>我是一个div元素</div>
+			<p>我是一个p元素</p>
+			<p>我是一个p元素</p>
+			<div>我是一个div元素</div>
+		</div>
+	</body>
+</html>

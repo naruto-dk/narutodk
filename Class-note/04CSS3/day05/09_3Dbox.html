@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.wrap{
+				width: 100px;
+				height: 100px;
+				border:1px solid #000;
+				margin: 100px auto;
+				position:relative;
+				perspective: 1000px;
+			}
+			.box{
+				width:100px;height:100px;background:red; position:relative; -webkit-transform-style:preserve-3d; transition:2s;
+			}
+			.box div{
+				width: 100px;
+				height: 100px;
+				background: #ccc;
+				text-align: center;
+				font:50px/100px "microsoft sans serif";
+				position:absolute;
+			}
+			.box div:nth-of-type(1){
+				left:-100px;
+				background: #0073B3;
+				transform-origin: right;
+				transform: rotateY(90deg);
+			}
+			.box div:nth-of-type(2){
+				top:-100px;
+				background: #07BBEE;
+				transform-origin: bottom;
+				transform: rotateX(90deg);
+			}
+			.box div:nth-of-type(3){
+				left:100px;
+				background: #07BBEE;
+				transform-origin: left;
+				transform: rotateY(90deg);
+			}
+			.box div:nth-of-type(4){
+				top:100px;
+				background: #4B0082;
+				transform-origin:top;
+				transform: rotateX(90deg);
+			}
+			.box div:nth-of-type(5){
+				left:0px;top:0px;background:#CCF;
+			}
+			.box div:nth-of-type(6){left:0;top:0;background:#F0C;-webkit-transform:translateZ(-100px);}
+			.wrap:hover .box{
+				transform: rotateX(180deg);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+		    <div class="box">
+		        <div>1</div>
+		        <div>2</div>
+		        <div>3</div>
+		        <div>4</div>
+		        <div>5</div>
+		       <!-- <div>6</div>-->
+		    </div>
+		</div>
+	</body>
+</html>

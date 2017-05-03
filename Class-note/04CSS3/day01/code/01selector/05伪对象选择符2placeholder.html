@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/*E::placeholder { sRules }*/
+			/*设置对象文字占位符的样式。
+			::placeholder 伪元素用于控制表单输入框占位符的外观，它允许开发者/设计师改变文字占位符的样式，默认的文字占位符为浅灰色。
+			当表单背景色为类似的颜色时它可能效果并不是很明显，那么就可以使用这个伪元素来改变文字占位符的颜色。
+			需要注意的是，除了Firefox是 ::[prefix]placeholder，其他浏览器都是使用 ::[prefix]input-placeholder
+			Firefox支持该伪元素使用text-overflow属性来处理溢出问题。*/
+			
+			input::-webkit-input-placeholder {
+				color: #FF0000;
+			}
+			input:-ms-input-placeholder { // IE10+
+				color: #999;
+			}
+			input:-moz-placeholder { // Firefox4-18
+				color: #999;
+			}
+			input::-moz-placeholder { // Firefox19+
+				color: #999;
+			}
+			
+			
+			/*E::selection { sRules }*/
+			/*设置对象被选择时的样式。
+			需要注意的是，::selection只能定义被选择时的background-color，color及text-shadow(IE11尚不支持定义该属性)。*/
+			p::-moz-selection{background:#000;color:#f00;}
+			p::selection{background:#000;color:#f00;}
+		</style>
+	</head>
+	<body>
+		<input type="text" placeholder="占位符" />
+		<hr />
+		<h1>选中下面的文字，看看它的颜色</h1>
+		<p>你选中这段文字后，看看它们的文本颜色和背景色，就能明白::selection的作用。</p>
+	</body>
+</html>

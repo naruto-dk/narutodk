@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	body{
+		background-color: #000;
+	}
+	div{
+		width: 8px;
+		height: 8px;
+		background-color: #fff;
+		margin:200px;
+		border-radius: 50%;
+		transform-origin:-60px 0;
+		-webkit-animation:donghua 4s linear infinite;
+	}
+	  @-webkit-keyframes donghua{
+	  		0%{
+	  			transform:translate3d(0,0,0) rotate(0deg);
+	  		}
+	  		100%{
+	  			transform:translate3d(0,400px,0) rotate(360deg);
+	  		}
+	  }
+	</style>
+</head>
+<body>
+	<div></div>
+</body>
+</html>

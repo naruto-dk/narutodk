@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 200px;
+				height: 300px;
+				float:left;
+				margin-right: 50px;
+			}
+			.div1{
+				background: -webkit-linear-gradient(red, blue); /* Safari 5.1 - 6.0 */
+				background: -o-linear-gradient(red, blue); /* Opera 11.1 - 12.0 */
+				background: -moz-linear-gradient(red, blue); /* Firefox 3.6 - 15 */
+			    background: linear-gradient(red, blue); /* 标准的语法 */
+			}
+			.div2{
+				background: -webkit-linear-gradient(left, red , blue); /* Safari 5.1 - 6.0 */
+				background: -o-linear-gradient(left, red, blue); /* Opera 11.1 - 12.0 */
+			    background: -moz-linear-gradient(left, red, blue); /* Firefox 3.6 - 15 */
+				background: linear-gradient(to right, red , blue); /* 标准的语法 */
+			}
+			.div3{
+				background: -webkit-linear-gradient(left top, red , blue); /* Safari 5.1 - 6.0 */
+				background: -o-linear-gradient(left top, red, blue); /* Opera 11.1 - 12.0 */
+				background: -moz-linear-gradient(left top, red, blue); /* Firefox 3.6 - 15 */
+				background: linear-gradient(to left top, red , blue); /* 标准的语法 */
+			}
+			/*角度是指水平线和渐变线之间的角度，逆时针方向计算。换句话说，0deg 将创建一个从下到上的渐变，90deg 将创建一个从左到右的渐变。*/
+			.div4{
+				background: -webkit-linear-gradient(180deg, red, blue); /* Safari 5.1 - 6.0 */
+			    background: -o-linear-gradient(180deg, red, blue); /* Opera 11.1 - 12.0 */
+			    background: -moz-linear-gradient(180deg, red, blue); /* Firefox 3.6 - 15 */
+			    background: linear-gradient(180deg, red, blue); /* 标准的语法 */
+			}
+		</style>
+	</head>
+	<body>
+		<div class="div1"></div>
+		<div class="div2"></div>
+		<div class="div3"></div>
+		<div class="div4"></div>
+	</body>
+</html>

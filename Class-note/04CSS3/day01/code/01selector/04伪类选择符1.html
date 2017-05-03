@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/*
+			a:link {}设置超链接a在未被访问前的样式
+			a:visited {}设置超链接a在其链接地址已被访问过时的样式。
+			a:hover {}设置元素在其鼠标悬停时的样式。
+			a:active {}设置元素在被用户激活（在鼠标点击与释放之间发生的事件）时的样式。
+			*/
+			a:link{
+				color:#000000;
+			}
+			a:visited{
+				color:#0000FF;
+			}
+			a:hover{
+				color:red;
+			}
+			a:active{
+				color: orange;
+			}
+			
+			/*E:focus { sRules }*/
+			/*设置对象在成为输入焦点（该对象的onfocus事件发生）时的样式。
+			  webkit内核浏览器会默认给:focus状态的元素加上outline的样式。*/
+			 input:focus {
+				background: #009900;
+				color: #f60;
+				border: 1px solid #f60;
+				outline: none;
+			}
+		</style>
+	</head>
+	<body>
+		<a href="http://www.baidu.com" title="baidu" class="baidu">百度</a>
+		<a href="http://www.jd.com" title="jd">京东</a>
+		<a href="http://www.ganji.com" title="ganji">赶集</a>
+		<a href="http://www.58.com" title="58">58</a>
+		<hr />
+		<h1>请聚焦到以下输入框</h1>
+		<form action="#">
+			<ul>
+				<li><input value="姓名" /></li>
+				<li><input value="单位" /></li>
+				<li><input value="年龄" /></li>
+				<li><input value="职业" /></li>
+			</ul>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			//提示用户输入六边形的边长，用变量a来接收
+			//
+			var a=parseFloat(prompt("请输入六边形的边长："));
+			
+			//计算平方根  Math.sqrt(x)
+			
+			//计算面积
+			var s=3*Math.sqrt(3)/2*Math.pow(a,2);	
+			
+			//处理结果，保留两位小数
+			s=s.toFixed(2);
+			
+			//显示
+			document.write("边长为"+a+"厘米的六边形面积是："+s+"平方厘米<br/>");
+			document.write("边长为"+a+"分米的六边形面积是："+s+"平方分米<br/>");
+			document.write("边长为"+a+"米的六边形面积是："+s+"平方米<br/>");
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

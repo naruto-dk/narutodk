@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			//第一步 用户输入数字
+			var num=parseInt(prompt("请输入数字："));
+			//第二步 得到每一位
+			var baiwei=parseInt(num/100);
+			var shiwei=parseInt(num%100/10);
+			var gewei=parseInt(num%10);
+			
+			//第三步 计算
+			var sum=baiwei+shiwei+gewei;
+			
+			//第四步 显示
+			alert(num+"这个三位数的三位和是："+sum);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

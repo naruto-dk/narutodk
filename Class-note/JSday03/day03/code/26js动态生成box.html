@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.wrap{
+				width: 1200px;
+				height: 500px;
+				margin: 100px auto;
+				border:2px solid #000;
+			}
+			.row{
+				width: 120px;
+				height: 60px;
+				border:2px dashed #FF0000;
+				float: left;
+				margin: 10px;
+			}
+			.box{
+				width: 100px;
+				height: 50px;
+				background: #FF6600;
+				text-align: center;
+				font:20px/50px "microsoft yahei";
+				margin: 5px auto;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oBox=document.getElementById("box");
+				var oRow=document.getElementsByClassName("row");
+				for(var i=0;i<=9;i++){
+					oBox.innerHTML+="<div class='row'></div>";
+					oRow[i].innerHTML +="<div class='box'>"+i+"</div>";
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="wrap" id="box">
+			
+		</div>
+		
+		
+		
+	</body>
+</html>

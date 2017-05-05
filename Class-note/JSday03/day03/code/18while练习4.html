@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			//把1-9999之间的每位都是相同的数字 的数找出来  如  11 22 33 44 666 9999
+			var i=1;
+			while(i<=9999){
+				
+				if(i<=99 && i%11==0){
+					console.log(i);
+				}else if(i<=999 &&  i%111==0 ){
+					console.log(i);
+				}else if(i<=9999 &&  i%1111==0){
+					console.log(i);
+				}
+				i++;
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

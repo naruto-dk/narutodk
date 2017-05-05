@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				width: 100px;
+				height: 100px;
+				background: #0066CC;
+				display: none;
+			}
+			
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oBtn=document.getElementById("btn");
+				var oBox=document.getElementById("box");
+				var oBtn1=document.getElementById("show");
+				oBtn.onclick=function(){
+					oBox.style.width='200px';
+					oBox.style.height='300px';
+					oBox.style.background='#008000';
+				}
+				
+				oBtn1.onclick=function(){
+					oBox.style.display='block';
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" value="点击" id="btn"/>
+		<input type="button" value="显示" id="show" />
+		<div class="box" id="box"></div>
+	</body>
+</html>

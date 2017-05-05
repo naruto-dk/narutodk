@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			var a=  '3'== 3;//   ‘3’ ==3是true ，true赋给a  true
+			console.log(a);//  true 
+			
+			var b='4'===4;//fasle
+			
+			console.log(a || b);//true 
+			console.log(a && b);//false
+			console.log(a && !b);//true
+			console.log(!a && b);//false
+			
+			
+			//连比的写法
+			console.log("****"+3<2<4);//错误的写法
+			console.log(3<2 && 2<4);//正确的写法    false
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

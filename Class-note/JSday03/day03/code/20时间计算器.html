@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			var hzWeek= new Array("日","一","二","三","四","五","六","日");function cweekday(wday){return hzWeek[wday];}
+			function cala(){
+				y=document.getElementById("SY").value;
+				m=document.getElementById("SM").value;
+				d=document.getElementById("SD").value;
+				ddd=document.getElementById("decday").value;
+			
+				ttt=new Date(y,m-1,d).getTime()+ddd*24000*3600;
+			
+			theday=new Date();
+			theday.setTime(ttt);
+			document.getElementById("result1").innerHTML=theday.getFullYear()+"年"+(1+theday.getMonth())+"月"+theday.getDate()+"日 "+"星期"+cweekday(theday.getDay());
+			}
+			function calb()
+			{
+			
+			y2=document.getElementById("SY2").value;
+			m2=document.getElementById("SM2").value;
+			d2=document.getElementById("SD2").value;
+			
+			
+			y3=document.getElementById("SY3").value;
+			m3=document.getElementById("SM3").value;
+			d3=document.getElementById("SD3").value;
+			
+			
+			day2=new Date(y2,m2-1,d2);
+			day3=new Date(y3,m3-1,d3);
+			
+			document.getElementById("result2").innerHTML=(day3-day2)/86400000;
+			
+			
+			}
+			</script>
+	</head>
+	<body>
+		<div class="kuang" style="margin-bottom: 8px;">
+			
+			<div id="main_title" class="kuang_title">
+			
+				<div style="float:left;"><h1><a href="//tianshu.wncx.cn/" id="main_anniu">天数计算器</a></h1></div>
+			</div>
+			
+			
+			
+			<div id="main_content"><div class="nry_bt">
+			<img src="http://q.wncx.cn/m/tianshu/ico.png?v=15102301" alt="天数计算器 - 时间计算器 - 日期差天数计算">
+			<div class="nry_bt_text">天数计算器</div></div><div class="pmk_990_show pmk_1040_show" align="center">天数计算器 时间计算器 计算天数 日期差天数计算</div>
+			<div class="huisefengexian"></div>
+			<div align="center"><b>推算几天后的日期：</b>
+			</div>
+			<div style="line-height: 26px;text-align: center;">
+			请输入日期：<div class="pmk_sj_show"></div>　
+				<input size="8" id="SY" value="2017">年<input size="4" id="SM" value="03">月 <input size="4" id="SD" value="15">日
+			<br>请输入相差天数：<div class="pmk_sj_show"></div>
+			<input size="8" id="decday" value="100">天
+			（输入负数则往前计算）<br>
+			结果是：
+			<span id="result1">2016年12月5日 星期一</span>
+			<br>
+			<input type="button" value="计算" onclick="cala();" class="all_an_1">
+			<br>
+			</div>
+			<p style="font-size:14px;color:#990000;"> 计算方法:假如你输入是2017年12月12日,选择相差100天,那结果就是2018年3月22日星期四 ;假如你选择相差负100(-100)天,那结果就是2017年9月3日星期日。</p>
+			
+			<div align="center"><b>计算日期差：</b>
+			    <br>
+			</div>
+			<div style="line-height: 26px;text-align: center;">
+			开始时间：<div class="pmk_sj_show"></div>　	<input size="8" id="SY2" value="2017">年<input size="4" id="SM2" value="03">月 <input size="4" id="SD2" value="15">日<br>
+			结束时间：<div class="pmk_sj_show"></div>　
+			<input size="8" id="SY3" value="2018">年<input size="4" id="SM3" value="03">月 <input size="4" id="SD3" value="15">日<br>相差：
+			<span id="result2">366</span>天
+			<br>
+			<input type="button" value="计算两个日期相差天数" onclick="calb();" class="all_an_1">
+				<br>
+			</div>
+			<div id="ggwz___3" class="pmk_sj_show" style="margin-top:4px;margin-bottom:4px;"><script>ggdm_duqu("ggwz___3", "zishiying");</script></div><div id="ggwz___4" class="pmk_990_show pmk_1040_show" style="height: 90px; margin-top: 8px; margin-bottom: 8px; text-align: center;"><script>ggdm_duqu("ggwz___4", "728x90");</script><script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-8150058075457518" data-ad-slot="5644138630"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div><div class="xiaoshuomingkuang_neirong">相关工具：<a href="http://riqi.wncx.cn/" target="_blank">日期计算器</a> <a href="http://nianlingjisuanqi.wncx.cn/" target="_blank">年龄计算器</a> <a href="http://nongli.wncx.cn/gonglinongli.php" target="_blank">公历农历转换</a> <a href="http://nongli.wncx.cn/yinliyangli.php" target="_blank">阴历阳历转换</a> <a href="http://nongli.wncx.cn/" target="_blank">农历查询</a> <a href="http://jisuanqi.wncx.cn/" target="_blank">计算器</a></div> 
+			 <h2 class="xiaoshuomingkuang_biaoti">关于天数计算器</h2>
+			 <div class="xiaoshuomingkuang_neirong">
+			这是非常容易和快速的与天计算器应用程序，它可以让你知道天之间任何日期，计算未来或过去的日期，也知道一天这个星期是给定的日期。
+			 </div>
+	    </div>
+    </div>
+	</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>Document</title>
+	<style type="text/css">
+		body,h3,p,ul,input{margin:0;padding:0;}
+		body{font-size: 14px;font-family:"微软雅黑";}
+		h3,em{font-style:normal}
+		li{list-style:none}
+		input{ resize:none;overflow:auto;border: none;}
+		#box{
+			width: 570px;
+			height:40px;
+			text-indent: 25px;
+		}
+		.title{
+			height:30px;
+			background: #6ba542;
+			color: #fff;
+			line-height:30px;
+		}
+		#list{
+			height: 40px;
+			line-height: 40px;
+			font-size: 14px;
+		}
+		#list li{
+			border-bottom: 1px solid #bddede;
+		}
+		.before img{
+			vertical-align: middle;
+			padding-left:10px ;
+		}
+		.after input{
+			width: 160px;
+			height: 28px;
+			border: 1px solid #e6c357;
+			
+		}
+		.after span{
+			margin:10px;
+			padding: 5px;
+		}
+		.after span:hover{
+			background: #68ac39;
+			color: #fff;
+		}
+		.before{display:block;}
+		.after{display:none;}
+	</style>
+	<script type="text/javascript">
+		window.onload = function  () {
+			var oUl = document.getElementById('list');
+			var aLi = oUl.getElementsByTagName('li');
+			for(var i=0;i<aLi.length;i++){
+				amend(aLi[i]);
+			}
+			
+			function amend(oLi){
+				var aDiv = oLi.getElementsByTagName('div');
+				var oEm = aDiv[0].getElementsByTagName('em')[0];
+				var oImg = aDiv[0].getElementsByTagName('img')[0];
+				var oText = aDiv[1].getElementsByTagName('input')[0];
+				var aSpan = aDiv[1].getElementsByTagName('span');
+
+				oImg.onclick = function(){
+					aDiv[0].style.display='none';
+					aDiv[1].style.display='block';
+				};
+				
+				aSpan[0].onclick = function(){
+					oEm.innerHTML = oText.value;
+					aDiv[0].style.display='block';
+					aDiv[1].style.display='none';
+				};
+				aSpan[1].onclick = function(){
+					aDiv[0].style.display='block';
+					aDiv[1].style.display='none';
+				};
+			}
+		};
+	</script>
+		
+	</head>
+	<body>
+		<div id="box">
+			<div class="title">
+				<h3>分类名称</h3>
+			</div>
+			<ul id="list">
+				<li>
+					<div class='before'><em>TaoGe1024</em><img src="img/pencil.png"/></div>
+					<div class='after'>
+						<input type="text" name="" id="" value="TaoGe1024" />
+						<span>确定</span><span>取消</span>
+					</div>
+				</li>
+				<li>
+					<div class='before' id="before"><em>TaoGe1024</em><img src="img/pencil.png"/></div>
+					<div class='after'id="after">
+						<input type="text" name="" id="" value="TaoGe1024" />
+						<span>确定</span><span>取消</span>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

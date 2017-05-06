@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>02js热身课程02</title>
+	<style type="text/css">
+		#box{
+			width: 300px;
+			height: 200px;
+			background: green;
+			margin:20px;
+		}
+	</style>
+	<script type="text/javascript">
+	window.onload=function(){
+		var oBtn1=document.getElementById("show_btn");
+		var oBtn2=document.getElementById("hidden_btn");
+		var box=document.getElementById("box");
+		oBtn1.onclick=show;
+		oBtn2.onclick=hidden;
+		
+		function show(){
+			box.style.display="block";
+			box.style.background="red";
+		}
+		function hidden(){
+			box.style.display="none";
+		}
+	}
+	</script>
+</head>
+	<input id="show_btn" type="button" value="显示" />
+	<input id="hidden_btn" type="button" value="隐藏" />
+	<strong id="strong1">我也要让它始终显示~~</strong>
+	<div id="box"></div>
+
+</html>

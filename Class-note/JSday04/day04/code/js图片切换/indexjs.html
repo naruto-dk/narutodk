@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			li{
+				list-style: none;
+			}
+			img{
+				border: 0;
+			}
+			a{
+				text-decoration: none;
+			}
+			.box{
+				/*width:759px;*/
+				width:253px;
+				height: 90px;
+				overflow: hidden;
+				border:1px solid #000000;
+				margin: 100px auto;
+				position: relative;
+				
+			}
+			.box ul{
+				position: absolute;
+				left:0;
+				top:0;
+				width:759px;
+				height:253px;
+			}
+			.box ul li{
+				float:left;
+			}
+			
+			.btn{
+				display:inline-block;
+				width: 30px;
+				height: 30px;
+				font:20px/30px "microsoft yahei";
+				background: rgba(0,0,0,.8);
+				text-align: center;
+				color: #fff;
+				position: absolute;
+				
+				top:50%;
+				margin-top: -15px;
+				z-index: 10;
+			}
+			.prev{
+				left:0;
+			}
+			.next{
+				right: 0;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				//第一步 获取元素
+				var oList=document.getElementById("list");
+				var oPrev=document.getElementsByClassName("prev")[0];
+				var oNext=document.getElementsByClassName("next")[0];
+				var i=0;
+				oPrev.onclick=function(){
+					//console.log(1);
+					i++;
+					if(i>2){
+						i=0;
+					}
+					oList.style.left=-i*253+"px";
+					console.log("prev:"+i);
+				}
+				
+				oNext.onclick=function(){
+					i--;
+					if(i<-2){
+						i=0;
+					}
+					console.log("next:" +i);
+					oList.style.left=i*253+"px";
+					
+					//console.log(1);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="box">
+			<ul id="list">
+				<li><a href=""><img src="img/t1.jpg"/></a></li>
+				<li><a href=""><img src="img/t2.jpg"/></a></li>
+				<li><a href=""><img src="img/t3.jpg"/></a></li>
+			</ul>
+			<a href="javascript:;" class="btn  prev">&lt;</a>
+			<a href="javascript:;" class="btn  next">&gt;</a>
+		</div>
+	</body>
+</html>

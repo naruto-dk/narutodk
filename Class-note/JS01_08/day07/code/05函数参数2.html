@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function f1(a,b,c){
+				console.log(f1.length);//得到的是函数的 形参的个数
+				console.log(arguments);
+				console.log(arguments.length);// 得到的是实参 的个数
+				
+				if(f1.length==arguments.length){
+					console.log(a+b);
+				}else{
+					console.log("对不起，你的参数不匹配，正确的个数为："+f1.length);
+				}
+			}
+			f1(1,2);
+			f1(1,2,3);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			ul{
+				width: 300px;
+			}
+			.add{
+				background: #00FF00;
+				color:#fff;
+				font:20px/30px "microsoft yahei";
+				text-align: center;
+				margin-bottom: 10px;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oBtn=document.getElementById("btn1");
+				var oList=document.getElementById("list");
+				var aLi=oList.getElementsByTagName("li");
+				var oText=document.getElementById("txt1");
+				oBtn.onclick=function(){
+					/*for(var i=0;i<aLi.length;i++){
+						aLi[i].style.color="#F19F0F";
+					}*/
+					
+					oList.innerHTML +="<li class='add'>"+oText.value+"</li>";
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" name="" id="txt1" />
+		<button id="btn1">增加</button>
+		<ul id="list">
+			<li>11111111111111</li>
+			<li>11111111111111</li>
+			<li>11111111111111</li>
+			<li>11111111111111</li>
+		</ul>
+	</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.content{
+				width: 400px;
+				height: 300px;
+				border:2px solid #000;
+				overflow: auto;
+			}
+			li{
+				list-style: none;
+				width: 100%;
+				border:1px solid #ccc;
+			}
+			.bajie{
+				color:#000099;
+				text-align: left;
+			}
+			.shaseng{
+				color: #FF00CC;
+				text-align: right;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="content">
+			<!--八戒：大师兄，师傅被妖怪抓走了！-->
+			<ul>
+				<li class="bajie">
+					<span>八戒：</span>
+					<p>11111111111111</p>
+				</li>
+				<li class="shaseng">
+					<span>沙僧：</span>
+					<p>2222222222222222222222</p>
+				</li>
+				<li class="shaseng">
+					<span>沙僧：</span>
+					<p>2222222222222222222222</p>
+				</li>
+				<li class="shaseng">
+					<span>沙僧：</span>
+					<p>2222222222222222222222</p>
+				</li>
+				<li class="bajie">
+					<span>八戒：</span>
+					<p>11111111111111</p>
+				</li>
+			</ul>
+			
+		</div>
+		<p>
+			<span id="user">八戒：</span>
+			<input type="text" id="txt1"/>
+			<input type="button" value="发送"  id="btn1"/>
+		</p>
+		<p>
+			<span id="user2">沙僧：</span>
+			<input type="text" id="txt2"/>
+			<input type="button" value="发送"  id="btn2"/>
+		</p>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oDiv=document.getElementsByClassName("content")[0];
+				var oUser=document.getElementById("user");
+				var oText=document.getElementById("txt1");
+				var oBtn=document.getElementById("btn1");
+				
+				var oUser2=document.getElementById("user2");
+				var oText2=document.getElementById("txt2");
+				var oBtn2=document.getElementById("btn2");
+				
+				oBtn.onclick=function(){
+					
+					if(oText.value==""){
+						alert("不要着急，把话说清楚");
+					}else{
+						oDiv.innerHTML +=oUser.innerHTML+oText.value+"<br/>";
+						oText.value="";
+					}
+				}
+				
+				
+				oBtn2.onclick=function(){
+					if(oText2.value==""){
+						alert("不要着急，把话说清楚");
+					}else{
+						oDiv.innerHTML +=oUser2.innerHTML+oText2.value+"<br/>";
+						oText2.value="";
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

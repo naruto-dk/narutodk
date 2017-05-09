@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			var num=10;
+			function fun(){
+				alert("我是自定义函数");
+				alert(num);
+			}
+			//函数不调用 它自己就不会执行
+			//fun();
+			
+			
+			var fun1=function(){
+				alert("直接量声明");
+			}
+			console.log(fun1);
+			//fun1(); 
+			
+			//没有名称的函数 就做匿名函数  anonymous
+			var fun2=new Function("var a=10;var b=20;alert(a+b)");
+			console.log(fun2);
+			fun2();
+			
+			
+			/*上面的写法等同于
+			 * function fun2() {
+				var a=10;var b=20;alert(a+b)
+			}*/
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

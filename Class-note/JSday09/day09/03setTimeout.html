@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			showTime(); 
+			function showTime(){ 
+				var today = new Date(); 
+				console.log("The time is: " + today.toString()); 
+				setTimeout("showTime()", 5000); 
+			} 
+			
+			
+			setInterval("showTime1()", 5000); 
+			function showTime1() 
+			{ 
+			var today = new Date(); 
+			console.log("The time is1111111: " + today.toString()); 
+			} 
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

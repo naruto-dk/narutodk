@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 *HTML的属性操作
+			 * 属性名：属性值
+			 * 属性的获取、操作
+			 * 元素.属性名
+			 * 
+			 * 
+			 * */
+		window.onload=function(){
+			//获取元素的方法
+			//document.getElementById();//相同的ID只能出现一次  选中是一个元素
+			//var oTxt=document.getElementById('txt');
+			var aInp=document.getElementsByTagName('input');//找到的一组元素 
+			var oSelect=document.getElementsByTagName('select')[0];
+			//console.log(oTxt);
+			//console.log(aInp);
+			
+			aInp[1].onclick=function(){
+				aInp[0].value=oSelect.value;
+			}
+		}
+			
+		</script>
+	</head>
+	<body>
+		<input type="text" name="" id="txt" />
+		<select name="">
+			<option value="北京">北京</option>
+			<option value="上海">上海</option>
+			<option value="重庆">重庆</option>
+		</select>
+		<input type="button" value="按钮" />
+	</body>
+</html>

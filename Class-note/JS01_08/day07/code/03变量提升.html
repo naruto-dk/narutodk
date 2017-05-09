@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			var num=10;
+			
+			function fun(){
+				console.log(num);
+				var num=20;
+			}
+			//fun();//num====>undefined
+			
+			
+			var a=18;
+			function fun2(){
+				var a=28;
+				console.log(a);
+				// var a=28;
+				
+				var b=20;//局部变量 只能在函数体内部使用
+			}
+			//fun2();//不是18   是28
+			//alert(b);
+			
+			var b=8;
+			function fun3(){
+				console.log(b);
+				b=88;  //变量提升
+			}
+			console.log(b);//8
+			fun3();//8
+			
+			console.log(b);//88
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

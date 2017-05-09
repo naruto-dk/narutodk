@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				var aBtn=document.getElementsByTagName("input");
+//				aBtn[0].value='123';
+//				aBtn[0].abc=8888;
+//				alert(aBtn[0].abc);
+				//js 可以为任何的HTML元素添加任意个 自定义属性
+				for(var i=0;i<aBtn.length;i++){
+					aBtn[i].abc=8888;
+				}
+				console.log(aBtn[0].abc);
+				for(var i=0;i<aBtn.length;i++){
+					//aBtn[i].abc=8888;
+					console.log(aBtn[i].abc);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" value="按钮1" />
+		<input type="button" value="按钮2" />
+		<input type="button" value="按钮3" />
+	</body>
+</html>

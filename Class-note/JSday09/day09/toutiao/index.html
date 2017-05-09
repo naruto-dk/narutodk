@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			li{
+				list-style: none;
+			}
+			a{
+				text-decoration: none;
+				display: block;
+			}
+			img{
+				display: block;
+				border:0;
+			}
+			
+			.wrap{
+				width: 660px;
+				height: 300px;
+				margin: 100px auto;
+			}
+			.fl{
+				float:left;
+				width: 600px;
+				height: 300px;
+				overflow: hidden;
+			}
+			.fl ul,.fl ul img{
+				width: 100%;
+				height: 100%;
+			
+				border:0;
+				outline-width:0px;
+			}
+			.fl ul li{
+				display: none;
+				position: relative;
+				
+			}
+			
+			.title{
+				position: absolute;
+			    left: 0;
+			    bottom: 11px;
+			    width: 100%;
+			    height: 44px;
+			    line-height: 44px;
+			    white-space: nowrap;
+			    overflow: hidden;
+			    text-overflow: ellipsis;
+			    padding-left: 22px;
+			    color: #fff;
+			    font-size: 20px;
+			    font-weight: 700;
+			    background-image: -webkit-linear-gradient(top,transparent 0,rgba(0,0,0,.8) 100%);
+			    background-image: linear-gradient(-180deg,transparent 0,rgba(0,0,0,.8) 100%);
+			    -moz-box-sizing: border-box;
+			    box-sizing: border-box;
+			}
+			
+			
+			.fr{
+				float: right;
+			    width: 60px;
+			    height: 300px;
+			    color: #fff;
+			    font-size: 14px;
+			    background-color: #222;
+			    padding: 7px 0;
+			    -moz-box-sizing: border-box;
+			    box-sizing: border-box;
+			    text-align: center;
+			}
+			.fr li{
+				position: relative;
+			    cursor: pointer;
+			    text-align: center;
+			    line-height: 36px;
+			    margin-bottom: 14px;
+			}
+			.active{
+				background: #ED4040;;
+			}
+			.active:before{
+				content: ' ';
+				position: absolute;
+				top:12px;
+				left:-6px;
+				width: 0;
+				height: 0;
+				border-top:6px solid transparent;
+				border-right: 6px solid rgba(237,64,64,.8);
+				border-bottom: 6px solid transparent;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="fl">
+				<ul>
+					<li style="display: block;">
+						<a href="" target="_blank">
+							<img src="img/1.jpg" alt="" />
+							<p class="title">英国议会大厦恐袭已致5人死亡 议会大厦临时关闭</p>
+						</a>
+					</li>
+					<li>
+						<a href="" target="_blank">
+							<img src="img/2.jpg" alt="" />
+							<p class="title">河南一小学发生踩踏事故 已致一死多伤</p>
+						</a>
+					</li>
+					<li>
+						<a href="" target="_blank">
+							<img src="img/3.jpg" alt="" />
+							<p class="title">斯嘉丽·约翰逊短发深V宣传《攻壳机动队》秀侧颜杀</p>
+						</a>
+					</li>
+					<li>
+						<a href="" target="_blank">
+							<img src="img/4.jpg" alt="" />
+							<p class="title">揭秘阿根廷青年足球学院 有望培养下一代梅西</p>
+						</a>
+					</li>
+					<li>
+						<a href="" target="_blank">
+							<img src="img/5.jpg" alt="" />
+							<p class="title">闪电步枪理念很先进 却遭嫌弃普及率低</p>
+						</a>
+					</li>
+					<li>
+						<a href="" target="_blank">
+							<img src="img/6.jpg" alt="" />
+							<p class="title">孙俪难得一见魔性表情包古灵精怪</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="fr">
+				<ul>
+					<li class="active">要闻</li>
+					<li>社会</li>
+					<li>娱乐</li>
+					<li>体育</li>
+					<li>军事</li>
+					<li>明星</li>
+				</ul>
+			</div>
+		</div>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oFl=document.getElementsByClassName("fl")[0];
+				var oFr=document.getElementsByClassName("fr")[0];
+				var aImg=oFl.getElementsByTagName("li");
+				var aTab=oFr.getElementsByTagName("li");
+				/*aTab[0].onclick=function(){
+					alert(1);
+				}
+				aTab[1].onclick=function(){
+					alert(1);
+				}*/
+				
+				aImg[0].style.display="block";
+				for(var i=0;i<aTab.length;i++){
+					aTab[i].index=i;
+					aTab[i].onclick=function(){
+						for(var j=0;j<aTab.length;j++){
+							aTab[j].className="";
+							aImg[j].style.display="none";
+						}
+						this.className="active";
+						aImg[this.index].style.display="block";
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

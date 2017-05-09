@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box2{
+				width: 100px;
+				height: 100px;
+				border: 1px solid #000;
+			}
+			.color{
+				color:#FF0000;
+				font-size:50px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class='box' id='div1' >1</div>
+		<div class="box2">2222222</div>
+		
+		
+		<script type="text/javascript">
+			var oDiv=document.getElementById("div1");
+			console.log(oDiv.id);//获取id
+			console.log(oDiv.className);//获取class
+			
+			/*----------------*/
+			//获取元素的第三种方法  通过类名  一组
+			var oBox2=document.getElementsByClassName("box2")[0];
+			oBox2.onclick=function(){
+				//oBox2.style.color='#FF0000';
+				//oBox2.className='box2 color';
+				this.className='box2 color';
+			}
+		</script>
+		
+		
+		
+		
+	</body>
+</html>

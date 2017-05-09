@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<img src="img/xc1.jpg" id="img"/>
+		<script type="text/javascript">
+			var oImg=document.getElementById("img");
+			var onOff=true;
+			
+			oImg.onclick=function(){
+				if(onOff){
+					oImg.src="img/xc3.jpg";
+				/*	onOff=false;*/
+				}else{
+					oImg.src="img/xc1.jpg";
+					/*onOff=true;*/
+				}
+				onOff=!onOff;
+			}
+			
+		</script>
+	</body>
+</html>

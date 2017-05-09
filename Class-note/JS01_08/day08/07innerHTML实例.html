@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.content{
+				width: 400px;
+				height: 300px;
+				border:2px solid #000;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="content">
+			<!--八戒：大师兄，师傅被妖怪抓走了！-->
+			
+		</div>
+		<p>
+			<span id="user">八戒：</span>
+			<input type="text" id="txt1"/>
+			<input type="button" value="发送"  id="btn1"/>
+		</p>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oDiv=document.getElementsByClassName("content")[0];
+				var oUser=document.getElementById("user");
+				var oText=document.getElementById("txt1");
+				var oBtn=document.getElementById("btn1");
+				
+				oBtn.onclick=function(){
+					
+					if(oText.value==""){
+						alert("不要着急，把话说清楚");
+					}else{
+						oDiv.innerHTML +=oUser.innerHTML+oText.value+"<br/>";
+						oText.value="";
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

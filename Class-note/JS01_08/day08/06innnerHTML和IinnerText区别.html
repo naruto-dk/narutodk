@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 innerHTML获取的包含标签和内容
+			 innerText只获取内容 不包含标签
+			 * 
+			 * */
+			window.onload=function(){
+				var oP1=document.getElementById("p1");
+				var oP2=document.getElementById("p2");
+				var aBtn=document.getElementsByTagName("button");
+				aBtn[0].onclick=function(){
+					console.log(oP1.innerHTML);
+				}
+				aBtn[1].onclick=function(){
+					console.log(oP2.innerText);                                                                                                                                                                                                                                                                                        
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<p id="p1">我是p1;这是一段非常精彩的文字……<span>哈哈哈哈……开什么玩笑</span></p>
+		<p id="p2">我是p2;这是一段非常精彩的文字……<span>哈哈哈哈……开什么玩笑</span></p>
+		<button>innerHTML</button>
+		<button>innerText</button>
+	</body>
+</html>

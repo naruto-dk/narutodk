@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 100px;
+				height: 100px;
+				background: #0000FF;
+				margin: 10px;
+				float: left;
+				text-align: center;
+				font:30px/100px "maiandra gd";
+				color:#fff;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oBox1=document.getElementById("box1");
+				var oBox2=document.getElementById("box2");
+				var oBox3=document.getElementById("box3");
+				var oBox4=document.getElementById("box4");
+				
+				var oBtn1=document.getElementById("btn1");
+				var oBtn2=document.getElementById("btn2");
+				var oBtn3=document.getElementById("btn3");
+				var oBtn4=document.getElementById("btn4");
+				
+				oBtn1.onclick=function(){
+					oBox1.style.display='none';
+				}
+				
+				oBtn2.onclick=function(){
+					oBox2.style.display='none';
+				}
+				
+				oBtn3.onclick=function(){
+					oBox3.style.display='none';
+				}
+				
+				oBtn4.onclick=function(){
+					oBox4.style.display='none';
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<button id='btn1'>one</button>
+		<button id='btn2'>two</button>
+		<button id='btn3'>three</button>
+		<button id='btn4'>four</button>
+		<hr />
+		<div  id="box1">1</div>
+		<div  id="box2">2</div>
+		<div  id="box3">3</div>
+		<div  id="box4">4</div>
+	</body>
+</html>

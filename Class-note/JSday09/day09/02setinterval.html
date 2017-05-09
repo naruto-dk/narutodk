@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oP=document.getElementById("p1");
+				function showTime() { 
+					
+					var today = new Date(); 
+					
+					//console.log(today);
+					
+					//oP.innerHTML=today.toString();
+					oP.innerHTML=today.getHours()+":"+today.getMinutes()+":"+today.getSeconds();
+					//console.log("The time is: " + today.toString()); 
+				} 
+				setInterval(showTime, 1000); 
+				//showTime();
+			}
+			
+			
+		</script>
+	</head>
+	<body>
+		<p id="p1"></p>
+	</body>
+</html>

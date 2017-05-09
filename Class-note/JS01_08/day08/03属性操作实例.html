@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" name="" id="txt" disabled="disabled" value="img/xc1.jpg"/>
+		<select name="">
+			<option value="img/xc1.jpg">携程1</option>
+			<option value="img/xc2.jpg">携程2</option>
+			<option value="img/xc3.jpg">携程3</option>
+			<option value="img/xc4.jpg">携程4</option>
+		</select>
+		<input type="button" value="按钮" />
+		<hr />
+		<img src="img/xc1.jpg"/>
+		<script type="text/javascript">
+			//第一步 获取元素
+			var oTxt=document.getElementById("txt");
+			var oSelect=document.getElementsByTagName("select")[0];
+			var oBtn=document.getElementsByTagName('input')[1];
+			var oImg=document.getElementsByTagName("img")[0];
+			
+			
+			//第二步  操作   事件
+			oBtn.onclick=function(){
+				//第三步  发生改变  影响
+				oTxt.value=oSelect.value;
+				oImg.src=oTxt.value;
+			}
+		</script>
+	</body>
+</html>

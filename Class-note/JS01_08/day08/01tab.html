@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.wrap{
+				width: 204px;
+				height: 204px;
+				position: relative;
+			}
+			.wrap div{
+				width: 200px;
+				height: 200px;
+				border:2px solid #000;
+				text-align: center;
+				font:50px/200px "microsoft yahei";
+				position: absolute;
+				top:0;
+				left:0;
+				display: none;
+			}
+			.wrap .active{
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<button>one</button>
+		<button>two</button>
+		<button>three</button>
+		<button>four</button>
+		<hr />
+		<div class="wrap">
+			<div class='active'>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+		</div>
+		<script type="text/javascript">
+			window.onload=function(){
+				var aBtn=document.getElementsByTagName('button');
+				var wrap=document.getElementsByClassName('wrap')[0];
+				var aBox=wrap.getElementsByTagName('div');
+				
+				for(var i=0;i<aBtn.length;i++){
+					aBtn[i].index=i;//自定义属性
+					aBtn[i].onclick=function(){
+						for(var j=0;j<aBox.length;j++){
+							aBox[j].style.display='none';
+							aBtn[j].style.backgroundColor='';
+						}
+						this.style.backgroundColor='pink';
+						aBox[this.index].style.display='block';
+					}
+					
+				}
+				
+				
+			}
+		</script>
+	</body>
+</html>

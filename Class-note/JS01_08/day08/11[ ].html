@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#div1{
+				width: 100px;
+				height: 100px;
+				border:1px solid #F19F0F;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oAttr=document.getElementById("attr");
+				var oVal=document.getElementById("val");
+				var oBtn=document.getElementById("btn");
+				var oDiv=document.getElementById("div1");
+				
+				oBtn.onclick=function(){
+					oAttr.value;
+					oVal.value;
+					
+					//oDiv.style.width=oVal.value;
+					//oDiv.style['width']=oVal.value;
+					oDiv.style[oAttr.value]=oVal.value;
+					
+					//  .后面的值无法修改
+					// [ ]里面的内容可以随意修改
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" name="" id="attr" /><br /><br />
+		<input type="text" name="" id="val" />
+		<input type="button" value="确定" id="btn" /><br /><br />
+		<div id="div1"></div>
+	</body>
+</html>

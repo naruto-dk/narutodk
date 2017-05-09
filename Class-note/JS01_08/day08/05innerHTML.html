@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text"  id="txt1" >
+		<input type="button" value="按钮" />
+		<hr />
+		<p>
+			这是段落中的一段文字……
+		</p>
+		<script type="text/javascript">
+			//
+			var oText=document.getElementById("txt1");/*变量名称  言简意赅  尽量简短  语义不明确  加注释*/
+			var oBtn=document.getElementsByTagName("input")[1];
+			var oP=document.getElementsByTagName("p")[0];
+			oBtn.onclick=function(){
+				//oP.innerHTML=oText.value;
+				//console.log(oP.innerHTML);
+				oP.innerText=oText.value;
+				console.log(oP.innerText);
+			}
+		</script>
+	</body>
+</html>

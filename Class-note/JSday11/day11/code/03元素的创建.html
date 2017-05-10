@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oText=document.getElementById("text1");
+				var oBtn=document.getElementById("btn");
+				var oUl=document.getElementById("ul1");
+				
+				oBtn.onclick=function(){
+					/*
+					 *document.createElement(标签名称)：创建元素
+					 */
+					var oLi=document.createElement("li");
+					oLi.innerHTML=oText.value;
+					var oA=document.createElement("a");
+					oA.innerHTML="删除";
+					oA.href="javascript:;";
+					
+					/*
+					 父级.removeChild(要删除的元素);删除元素
+					 * */
+					oA.onclick=function(){
+						oUl.removeChild(this.parentNode);
+					}
+					
+					/*
+					 添加到页面中
+					 父级.appendChild(要添加的元素)  追加子元素
+					 * */
+					oLi.appendChild(oA);
+					oUl.appendChild(oLi);
+					console.log(oLi);
+					//console.log(oA);
+					//oUl.innerHTML+='<li>'+oText.value+'<a href="javascript:;">删除</a>'+'</li>';
+					
+					
+					
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" id="text1"  />
+		<input type="button" value="留言" id="btn" />
+		<hr />
+		<ul id="ul1">
+			
+		</ul>
+	</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oText=document.getElementById("text1");
+				var oBtn=document.getElementById("btn");
+				var oUl=document.getElementById("ul1");
+				
+				oBtn.onclick=function(){
+					/*
+					 *document.createElement(标签名称)：创建元素
+					 */
+					var oLi=document.createElement("li");
+					oLi.innerHTML=oText.value;
+					var oA=document.createElement("a");
+					oA.innerHTML="删除";
+					oA.href="javascript:;";
+					
+					/*
+					 父级.removeChild(要删除的元素);删除元素
+					 * */
+					oA.onclick=function(){
+						oUl.removeChild(this.parentNode);
+					}
+					
+					/*
+					 添加到页面中
+					 父级.appendChild(要添加的元素)  追加子元素
+					 * */
+					oLi.appendChild(oA);
+					//oUl.appendChild(oLi);
+					//console.log(oLi);
+					//console.log(oA);
+					//oUl.innerHTML+='<li>'+oText.value+'<a href="javascript:;">删除</a>'+'</li>';
+					/*
+					 父级.insertBefore（新的元素，被插入的元素） 方法   在指定元素的前面插入一个新元素
+					 在ie下如果第二个参数的节点不存在 会报错
+					 
+					 在其他浏览器下如果第二个参数的节点不存在，则会以appendChild的形式进行添加
+					 * 
+					 * */
+					oUl.appendChild(oLi);
+					//oUl.insertBefore(oLi,oUl.children[0]);
+					
+					/*
+					 解决IE兼容方案
+					 如果没有子节点  则先追加一个子元素  
+					 如果有子节点 则直接插入
+					 * */
+					/*if(oUl.children.length){
+						oUl.insertBefore(oLi,oUl.children[0]);
+					}else{
+						oUl.appendChild(oLi);
+					}*/
+					
+					
+					if(oUl.children[0]){
+						oUl.insertBefore(oLi,oUl.children[0]);
+					}else{
+						oUl.appendChild(oLi);
+					}
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" id="text1"  />
+		<input type="button" value="留言" id="btn" />
+		<hr />
+		<ul id="ul1">
+			<!--<li>我就是第一</li>-->
+		</ul>
+	</body>
+</html>

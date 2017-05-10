@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oText=document.getElementById("txt1");
+				/*
+				 .
+				 []
+				 * */
+				//alert(oText.value);
+				//alert(oText['value']);
+				
+				//var name='value';
+				//alert(oText.name);
+				//alert(oText[name]);
+				
+				/*
+				 E.setAttribute(属性名称,属性值) 方法  给指定的元素指定的属性设置值
+				 * 
+				 * */
+				oText.setAttribute('value','hello world');
+				
+				
+				/*
+				 E.removeAttribute(属性名称); 方法 移除指定的元素指定的属性
+				 * */
+				oText.removeAttribute('value');
+				
+				/*
+				 用 . 和 []的形式无法操作元素的自定义属性 
+				 * */
+				alert(oText.id);
+				alert(oText.jack);
+				alert(oText['jack']);
+				/*
+				 E.getAttribute(自定义属性名称)  可以操作元素的自定义属性  本身的属性
+				 * */
+				alert(oText.getAttribute('jack'));
+				alert(oText.getAttribute('type'));
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" id="txt1" value="1111" name="abc" jack='jack123' />
+	</body>
+</html>

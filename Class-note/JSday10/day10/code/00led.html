@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oImg=document.getElementById("led");
+				var onOff=true;
+				oImg.onclick=function(){
+					if(onOff){
+						oImg.src="img/pic_bulbon.gif";
+					}else{
+						oImg.src="img/pic_bulboff.gif";
+					}
+					onOff=!onOff;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<img src="img/pic_bulboff.gif" id="led"/>
+	</body>
+</html>

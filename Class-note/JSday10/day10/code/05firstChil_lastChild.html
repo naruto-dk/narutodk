@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+		/*	E.firstChild:只读属性 第一个子节点
+			标准下:firstChild会包含文本类型的节点
+			非标准下:只包含元素节点
+			
+			E.firstElementChild:只读属性 标准下获取第一个元素类型的子节点
+		*/
+			window.onload=function(){
+				var oUl=document.getElementById("ul1");
+				//alert(oUl.firstChild);
+				//alert(oUl.firstElementChild);
+			/*	if(oUl.firstElementChild){
+					oUl.firstElementChild.style.background="red";
+				}*/
+			/*	if(oUl.firstChild){
+					oUl.firstChild.style.backgroundColor="red";
+				}*/
+				
+			/*	if(oUl.firstElementChild){
+					console.log(oUl.firstChild.nodeName);
+					console.log(oUl.firstElementChild.nodeName);
+					oUl.firstElementChild.style.background="red";
+				}else{
+					console.log(oUl.firstChild.nodeName);
+					console.log(oUl.firstElementChild.nodeName);
+					oUl.firstChild.style.backgroundColor="red";
+				}*/
+				
+				var oFirst=oUl.firstElementChild || oUl.firstChild;
+				oFirst.style.background="red";
+				
+				
+			/*	E.lastChild:只读属性 最后一个子节点
+			标准下:lastChild会包含文本类型的节点
+			非标准下:只包含元素节点
+			
+			E.lastlementChild:只读属性 标准下获取最后一个元素类型的子节点
+			*/
+				var oLast=oUl.lastElementChild || oUl.lastChild;
+				oLast.style.background="pink";
+			
+			}
+			
+		</script>
+	</head>
+	<body>
+		<div id="div1">
+			<p>我是一个段落</p>
+			<ul id="ul1" class="list">
+				<li>11111111111111 <span>span</span> </li>
+				<li>22222222222222</li>
+				<li>33333333333333</li>
+				<li>44444444444444</li>
+			</ul>
+		</div>
+	</body>
+</html>

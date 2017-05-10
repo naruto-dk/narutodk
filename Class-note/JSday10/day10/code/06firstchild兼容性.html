@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oUl=document.getElementById("ul1");
+				//alert(oUl.firstElementChild);//null
+				var oFirst=oUl.firstElementChild || oUl.firstChild;
+				
+				//alert(oFirst);
+			/*	if(oFirst){
+					oFirst.style.background="red";
+				}else{
+					alert("对不起，没有子节点可以设置");
+				}*/
+				
+			/*	if(oUl.children[0]){
+					console.log(oUl.children[0]);
+					oUl.children[0].style.background="red";
+				}else{
+					console.log(oUl.children[0]);
+					alert("对不起，没有子节点可以设置");
+				}*/
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1">
+			<p>我是一个段落</p>
+			<ul id="ul1" class="list">
+			<!--	<li>11111111111111 <span>span</span> </li>
+				<li>22222222222222</li>
+				<li>33333333333333</li>
+				<li>44444444444444</li>-->
+			</ul>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oUl=document.getElementById("ul1");
+			//	E.childNodes  :只读 属性 子节点列表集合
+			//标准下：包含了文本和元素类型的节点，也会包含非法嵌套的子节点
+			//非标准下：只包含元素类型的节点，IE7以下不会包含非法嵌套子节点
+			//childNodes只包含一级子节点，不包含后辈子孙以下的节点
+			//  兼容性
+				console.log(oUl.childNodes);
+				console.log(oUl.childNodes.length);
+				console.log(oUl.attributes);
+				console.log(oUl.attributes.length);//属性长度
+				console.log(oUl.attributes[0].value);//属性值
+				console.log(oUl.attributes[0].nodeType);//节点值为2  属性节点
+				
+				
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1">
+			<p>我是一个段落</p>
+			<ul id="ul1" class="list">
+				<li>11111111111111 <span>span</span> </li>
+				<li>22222222222222</li>
+				<li>33333333333333</li>
+				<p>88888888888</p><!--非法嵌套-->
+				<li>44444444444444</li>
+			</ul>
+		</div>
+	</body>
+</html>

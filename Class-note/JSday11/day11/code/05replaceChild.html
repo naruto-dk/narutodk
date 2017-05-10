@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oDiv=document.getElementById("div1");
+				var oBtn=document.getElementById("btn");
+				var oP=document.getElementById("p1");
+				
+				oBtn.onclick=function(){
+					/*
+					 父级.replaceChild(新节点，被替换的节点) 替换子节点
+					 * */
+					document.body.replaceChild(oDiv,oP);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1">div1</div>
+		<button id="btn">按钮</button>
+		<hr />
+		<p id="p1">1111111111111</p>
+	</body>
+</html>

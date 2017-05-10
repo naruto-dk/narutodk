@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				var aLi=document.getElementsByTagName("li");
+				console.log(aLi[0].parentNode);
+				
+				//E.parentNode ：只读属性 当前节点的父级节点
+				for(var i=0;i<aLi.length;i++){
+					aLi[i].onclick=function(){
+						console.log(i);
+						console.log(this.parentNode);
+					}
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1">
+			<p>我是一个段落</p>
+			<ul id="ul1" class="list">
+				<li>11111111111111 <span>span</span> </li>
+				<li>22222222222222</li>
+				<li>33333333333333</li>
+				<li>44444444444444</li>
+			</ul>
+		</div>
+	</body>
+</html>

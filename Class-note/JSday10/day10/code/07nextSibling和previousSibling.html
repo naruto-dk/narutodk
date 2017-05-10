@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oUl=document.getElementById("ul1");
+				var oFirst=oUl.firstElementChild || oUl.firstChild;
+				var oLast=oUl.lastElementChild || oUl.lastChild;
+				
+				oFirst.style.background="red";
+				oLast.style.background="pink";
+				
+				var oNext=oFirst.nextElementSibling || oFirst.nextSibling;
+				oNext.style.background="blueviolet";
+				
+				
+				var oPrev=oLast.previousElementSibling || oLast.previousSibling;
+				oPrev.style.background="orange";
+				
+			//E.nextSibling || E.nextElementSibling 下一个兄弟节点
+			
+			//E.previousSibling || E.previousElementSibling 上一个兄弟节点
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1">
+			<p>我是一个段落</p>
+			<ul id="ul1" class="list">
+				<li>11111111111111 <span>span</span> </li>
+				<li>22222222222222</li>
+				<li>33333333333333</li>
+				<li>44444444444444</li>
+			</ul>
+		</div>
+	</body>
+</html>

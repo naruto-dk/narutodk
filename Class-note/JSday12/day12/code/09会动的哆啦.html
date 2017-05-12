@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 100px;
+				height: 100px;
+				background: #FF0000;
+				position: absolute;
+				border-radius: 50%;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				//onmousemove:当鼠标在一个元素上面移动的时候触发
+				
+				var oDiv=document.getElementById("div1");
+				var i=0;
+				document.onmousemove=function(ev){
+					var ev=ev || event;
+					//document.title=i++;
+					var scrollTop=document.documentElement.scrollTop || document.body.scrollTop;
+					oDiv.style.left=ev.clientX+'px';
+					oDiv.style.top=ev.clientY+scrollTop+'px';
+					console.log(oDiv.style.top);
+					console.log(scrollTop);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1"></div>
+	</body>
+</html>

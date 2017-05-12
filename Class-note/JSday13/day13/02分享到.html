@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#div1{
+				width: 100px;
+				height: 200px;
+				background: #FF0000;
+				position: absolute;
+				left:-100px;
+				top:100px;
+			}
+			#div2{
+				width: 30px;
+				height: 80px;
+				position: absolute;
+				right:-30px;
+				top:70px;
+				background: #000000;
+				color:#fff;
+				text-align: center;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oDiv=document.getElementById("div1");
+				oDiv.onmouseover=function(){
+					this.style.left='0px';
+				}
+				oDiv.onmouseout=function(){
+					this.style.left='-100px';
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1">
+			<div id="div2">分享到</div>
+		</div>
+	</body>
+</html>

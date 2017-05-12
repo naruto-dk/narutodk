@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				padding: 40px;
+			}
+			#div1{
+				background: #FF0000;
+			}
+			#div2{
+				background: #008000;
+			}
+			#div3{
+				background: #0000FF;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				/*
+				 事件冒泡：当一个元素接收到事件的时候，
+				 会把他接收到的所有传播给他的父级
+				 一直到顶层window。事件冒泡机制
+				 * 
+				 * */
+				
+				var oDiv1=document.getElementById("div1");
+				var oDiv2=document.getElementById("div2");
+				var oDiv3=document.getElementById("div3");
+				
+				function fn1(){
+					alert(this.id);
+					console.log(this);
+				}
+				
+			//	oDiv1.onclick=fn1;//给odiv1加事件 给元素家事件处理函数
+				oDiv1.onclick=fn1;//
+				oDiv2.onclick=fn1;//
+				oDiv3.onclick=fn1;//
+				/*oDiv1.onclick=function(){
+					alert(this.id);
+					
+				}*/
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1">
+			<div id="div2">
+				<div id="div3"></div>
+			</div>
+		</div>
+	</body>
+</html>

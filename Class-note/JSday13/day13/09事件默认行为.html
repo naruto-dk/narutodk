@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			//事件默认行为:当一个事件发生的时候浏览器自己会默认做的事情return false
+			//阻止事件默认行为:当前这个行为是什么事件触发的,就在这个事件的处理函数中使用
+			/*document.onkeydown=function(){
+				return false;
+			}*/
+			//oncontextmenu:右键菜单事件：当右键菜单显示出来的时候触发
+			document.oncontextmenu=function(){
+				//alert(1);
+				return false;
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function changetext(id){
+				id.innerHTML="谢谢!";
+			}
+			
+		</script>
+	</head>
+	<body>
+		<h1 onclick="this.innerHTML='谢谢!'">请点击该文本</h1>
+		<h2 id="h2" onclick="changetext(this)">11119999</h2>
+		<h2 id="h3" onclick="changetext(document.getElementById('h3'))">11119999</h2>
+	</body>
+</html>

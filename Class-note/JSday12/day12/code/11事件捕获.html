@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				padding: 40px;
+			}
+			#div1{
+				background: #FF0000;
+			}
+			#div2{
+				background: #008000;
+			}
+			#div3{
+				background: #0000FF;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				/*
+				 事件捕获
+				 * 
+				 * */
+				
+				var oDiv1=document.getElementById("div1");
+				var oDiv2=document.getElementById("div2");
+				var oDiv3=document.getElementById("div3");
+		
+			
+				oDiv1.addEventListener("click",function(event){
+		            alert(this.id);
+		        },true);
+		        
+				oDiv2.addEventListener("click",function(event){
+		            alert(this.id);
+		        },true);
+				
+				oDiv3.addEventListener("click",function(event){
+		            alert(this.id);
+		        },true);
+		        
+		        document.body.addEventListener("click",function(event){
+		            alert("body");
+		        },true);
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1">
+			<div id="div2">
+				<div id="div3"></div>
+			</div>
+		</div>
+	</body>
+</html>

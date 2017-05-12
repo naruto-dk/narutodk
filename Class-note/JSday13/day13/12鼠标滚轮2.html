@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#div1{
+				width: 100px;
+				height: 100px;
+				background: #FF0000;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oDiv=document.getElementById("div1");
+				/*
+				 ie/chrome:onmousewheel
+				 firefox:DOMMMouseScroll 必须用addEventListener
+				 * 
+				 * */
+			
+			
+				document.onmousewheel=fn;
+				function fn(ev){
+					var ev=ev ||event;
+					//alert(ev.wheelDelta);
+					//alert(ev.detail);
+					var b=true;
+					
+					if(ev.wheelDelta){
+						b=ev.wheelDelta>0 ? true : false;
+					}else{
+						b=ev.detail<0 ? true : false;
+					}
+					
+					if(b){
+						oDiv.style.height=oDiv.offsetHeight-10+'px';
+					}else{
+						oDiv.style.height=oDiv.offsetHeight+10+'px';
+					}
+					
+					
+					if(ev.preventDefault){
+						ev.preventDefault()
+					}
+					return false;
+					
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1"></div>
+	</body>
+</html>

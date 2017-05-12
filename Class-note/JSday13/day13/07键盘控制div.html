@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 100px;
+				height: 100px;
+				background: #F19F0F;
+				position: absolute;
+				left:0;
+				top:0;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oDiv=document.getElementById("div1");
+				//不是所有的元素都能够接收键盘事件，能够响应用户输入的元素，能够接收焦点的元素就能够接收键盘事件；
+				document.onkeydown=function(ev){
+					var ev=ev||event;
+					switch(ev.keyCode){
+						case 65:
+							oDiv.style.left=oDiv.offsetLeft-10+'px';
+						break;
+						case 68:
+							oDiv.style.left=oDiv.offsetLeft+10+'px';
+						break;
+						case 87:
+							oDiv.style.top=oDiv.offsetTop-10+'px';
+						break;
+						case 83:
+							oDiv.style.top=oDiv.offsetTop+10+'px';
+						break;
+					}
+					
+					//break  continue
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1"></div>
+	</body>
+</html>

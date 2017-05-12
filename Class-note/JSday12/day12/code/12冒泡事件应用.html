@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#div1{
+				width: 100px;
+				height: 200px;
+				border:1px solid #FF0000;
+				display: none;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oBtn=document.getElementById("btn1");
+				var oDiv=document.getElementById("div1");
+				//阻止冒泡：当前要阻止冒泡的事件函数中调用event.cancelBubble=true
+				oBtn.onclick=function(ev){
+					var ev=ev || event;
+					ev.cancelBubble=true;//阻止当前对象的当前事件的冒泡
+					oDiv.style.display='block';
+				}
+				document.onclick=function(){
+					/*setTimeout(function(){
+						oDiv.style.display='none';
+					},1000);*/
+					oDiv.style.display='none';
+					//oDiv.style.background='blue';
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<button id="btn1">按钮</button>
+		<div id="div1"></div>
+		<p>111</p>
+		<p>222</p>
+		<p>23333</p>
+		<p>444</p>
+	</body>
+</html>

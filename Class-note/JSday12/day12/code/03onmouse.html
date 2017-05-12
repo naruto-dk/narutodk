@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>11</title>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oBtn=document.getElementById("btn1");
+				oBtn.onmousedown=function(){
+					document.title='onmousedown';
+				}
+				oBtn.onmouseup=function(){
+					document.title='onmouseup';
+				}
+				oBtn.onmouseenter=function(){
+					document.title='enter';
+				}
+				oBtn.onmouseleave=function(){
+					document.title='leave'
+				}
+				oBtn.onmousemove=function(){
+					var i=0;
+					document.title=i++;
+				}
+			/*	oBtn.onclick=function(){
+					document.title='onclick';
+				}*/
+			}
+		</script>
+	</head>
+	<body>
+		<button id="btn1">按钮</button>
+	</body>
+</html>
